@@ -2,10 +2,21 @@
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+src/config/base_config.yaml
 
+# ignore all data files
+data/
+
+# ignore the python environment files
+mhcenv/
+.venv/
+.vscode/
 # Node artifact files
 node_modules/
 dist/
+
+# ignore results directoy
+results/
 
 # Compiled Java class files
 *.class
@@ -48,3 +59,5 @@ Thumbs.db
 *.mov
 *.wmv
 
+src/mch/api/hc-api.plist
+src/mch/config/base_config.yaml
