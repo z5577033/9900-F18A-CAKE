@@ -112,20 +112,25 @@ class DiseaseTree:
     def get_child_names(self):
         return [child.name for child in self.children]
 
-
-    def get_samples_recursive(self):
+    def get_samples_recursive(self, sample_type="all"):
         # Start with the samples of the current node
         # Recursively collect samples from children
-        collected_samples = self.samples.copy()
+        if sample_type == "all":
+            collected_samples = self.samples.copy()
+        elif sample_type == "training":
+            collected_samples = self.training_samples.copy()
+        elif sample_type == "validation":
+            collected_samples = self.validation_samples.copy()
+        else:
+            raise ValueError(f"Unknown sample_type: {sample_type}")
 
         if not self.children:
-            return self.samples
+            return collected_samples
         else:
             for child in self.children:
-                collected_samples.extend(child.get_samples_recursive())
+                collected_samples.extend(child.get_samples_recursive(sample_type=sample_type))
 
-        return collected_samples
-
+            return collected_samples
 
     def get_nodes_at_level(self, level: int) -> list['DiseaseTree']:
         # Create a list to store nodes at the specified level

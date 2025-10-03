@@ -7,7 +7,8 @@ This repository contains source code for heirarichal classifer using methylation
 ## Set up
 There should be set up instructions, yes.
 
-/analysis contains notebooks for some ad-hoc analyses. scripts to find and generate data are in /data_processing. sample_file_generation.py generates files for new samples, it is currently run as a cron job nightly. Generated files will contain all probes for each sample, and are the base data file that is used as inputs to the filtering steps prior to model generation. sample_feature_collection selects the features that were identified as part of model training and adds them to a dataframe that is used to serve results.
+scripts to find and generate data are in /data_processing. 
+sample_file_generation.py generates files for new samples, it is currently run as a cron job nightly. Generated files will contain all probes for each sample, and are the base data file that is used as inputs to the filtering steps prior to model generation. sample_feature_collection selects the features that were identified as part of model training and adds them to a dataframe that is used to serve results.
 
 - Summary of set up
 - Configuration
