@@ -3,29 +3,35 @@
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
-# Python environment files
+# Python environment files (these are large and system-specific)
 mhcenv/
 hw_9900/
 .venv/
 .vscode/
 
-# Allow important config files (override data/ ignore)
+# Allow important config and small data files
 !data/colorProfiles.json
 !src/mch/config/base_config.yaml
 !src/mch/config/modelTrainingConfig.yaml
 
-# Ignore large data files but keep small config files
-data/*.csv
+# Only ignore very large data files, but keep smaller ones
 data/*.parquet
 data/*.h5ad
-data/freeze*/
+data/freeze*/MValue_concat.csv
+data/freeze*/*.zip
 data/__MACOSX/
+
+# Keep other data files like README.md in data folders
+!data/freeze*/README.md
+!data/freeze*/*.joblib
 # Node artifact files
 node_modules/
 dist/
 
-# ignore results directory (model outputs)
+# ignore results directory (generated model outputs)
 results/
+# But keep the README in results
+!results/README.md
 
 # Compiled Java class files
 *.class
