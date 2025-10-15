@@ -9,7 +9,7 @@ def health():
 
 @app.get("/freeze")
 def freeze_info():
-    root = Path(__file__).resolve().parents[2]  # repo root
+    root = Path(__file__).resolve().parents[3]  # repo root
     joblib_file = root / "data" / "freeze0525" / "diseaseTree_mapped.joblib"
     return {
         "freeze_dir_exists": (root / "data" / "freeze0525").exists(),
