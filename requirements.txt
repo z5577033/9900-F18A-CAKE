@@ -95,7 +95,6 @@ MarkupSafe==3.0.2
 matplotlib==3.9.2
 matplotlib-inline==0.1.7
 mccabe==0.7.0
--e git+ssh://git@bitbucket.org/benccia/methylationclassifier.git@fa1fc1719d01ec77ffcd88d100b1d0998133dc4f#egg=mch
 memoized-property==1.0.3
 methylcheck==0.8.5
 methylize==1.1.1
@@ -128,7 +127,7 @@ pillow==11.0.0
 platformdirs==4.3.6
 plotly==5.24.1
 pluggy==1.5.0
-polars==1.12.0
+polars==0.20.31
 progressbar33==2.4
 prometheus_client==0.21.0
 prompt_toolkit==3.0.48
@@ -137,7 +136,7 @@ protobuf==3.20.3
 psutil==6.1.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
-pyarrow==18.0.0
+pyarrow==14.0.2
 pycparser==2.22
 pydantic==2.10.6
 pydantic_core==2.27.2

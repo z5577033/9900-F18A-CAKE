@@ -1,0 +1,4 @@
+freeze: "freeze0525"
+freeze_number: "0525"
+working_directory: "d:\\UNSW\\hc_3900"
+credential_file: "config/credentials.yaml"

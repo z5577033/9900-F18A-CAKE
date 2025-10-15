@@ -26,7 +26,9 @@ import time
 
 from mch.models.differentialMethylationClassifier import DifferentialMethylation
 from mch.data_processing.dataset_filtering import filter_problem_probes
-from mch.utils.logging_utils import load_config, logging
+from mch.utils.logging_utils import logging
+from mch.config.modelTrainingParameters import load_model_config
+from mch.utils.model_persistence import ModelPersistence, save_research_model
 
 from mch.config.settings import (
     FREEZE_NUMBER, 
@@ -57,7 +59,7 @@ def load_model_config() -> dict:
     #config_path = Path(__file__).parent.parent / 'config' / 'modelTrainingConfig.yaml'
     #with open(config_path) as f:
     #    config = yaml.safe_load(f)
-    config = load_config("model_training_config.yaml")
+    config = load_model_config()
     return config
 
 def make_dataset(filtered_data: pd.DataFrame, disease_tree) -> tuple[pd.DataFrame, pd.DataFrame] | None:
@@ -163,8 +165,8 @@ def run_level(all_data: pd.DataFrame, tree, results_dir: Path | None = None) -> 
     config = load_model_config()
     model_type = config.get('default_model_type', 'svm')
     
-    # Run grid search
-    model, validation_samples = run_grid_search(
+    # Run grid search with enhanced training info collection
+    model, X_test, y_test, training_info = run_grid_search_enhanced(
         filtered_data=dataset,
         design=design,
         model_type=model_type,
@@ -172,23 +174,57 @@ def run_level(all_data: pd.DataFrame, tree, results_dir: Path | None = None) -> 
     )
     
     # Store validation samples in tree
-    tree.validation_samples = validation_samples
+    tree.validation_samples = y_test
     
     # Create output directories if they don't exist
     model_dir = results_dir / 'trees'
     model_dir.mkdir(parents=True, exist_ok=True)
     
-    # Save model and tree with validation samples, including model type in filename
-    model_path = model_dir / f"model-{model_type}-{tree.name}.joblib"
+    # Save model using standardized research format
+    model_name = f"{model_type}_{tree.name}"
+    
+    # Prepare training parameters for saving
+    training_params = {
+        "model_type": model_type,
+        "node_name": tree.name,
+        "freeze": FREEZE,
+        "freeze_number": FREEZE_NUMBER,
+        "dataset_shape": dataset.shape,
+        "unique_cancer_types": unique_types.tolist(),
+        "training_config": training_info
+    }
+    
+    # Get feature names and class names
+    feature_names = dataset.columns.tolist() if hasattr(dataset, 'columns') else None
+    class_names = unique_types.tolist()
+    
+    # Save using standardized format: model.joblib, params.json, metrics.json
+    logger.info(f"Saving {model_type} model package for {tree.name} using research standards")
+    saved_model_dir = save_research_model(
+        model=model,
+        model_name=model_name,
+        X_test=X_test,
+        y_test=y_test,
+        save_directory=model_dir,
+        training_params=training_params,
+        feature_names=feature_names,
+        class_names=class_names,
+        additional_metadata={
+            "tree_node": tree.name,
+            "parent_nodes": [parent.name for parent in tree.get_parents()] if hasattr(tree, 'get_parents') else [],
+            "data_freeze": FREEZE
+        }
+    )
+    
+    # Also save tree with validation samples (legacy format)
     tree_path = model_dir / f"diseaseTree-{model_type}-{tree.name}.joblib"
-    
-    logger.info(f"Saving {model_type} model to {model_path}")
-    joblib.dump(model, model_path)
-    
     logger.info(f"Saving tree with validation samples to {tree_path}")
     joblib.dump(tree, tree_path)
     
     logger.info(f"Completed model generation for {tree.name}")
+    logger.info(f"Model package saved to: {saved_model_dir}")
+    
+    return saved_model_dir
 
 def run_grid_search(filtered_data: pd.DataFrame, design: pd.DataFrame, model_type: str, custom_param_grid: dict | None = None, name: str = "") -> tuple[Pipeline, pd.Series]: 
     """Run grid search to find the best model parameters.
@@ -261,3 +297,105 @@ def run_grid_search(filtered_data: pd.DataFrame, design: pd.DataFrame, model_typ
     logger.info(f"Best cross-validation score: {search.best_score_:.3f}")
 
     return best_model, y_test
+
+
+def run_grid_search_enhanced(filtered_data: pd.DataFrame, design: pd.DataFrame, model_type: str, custom_param_grid: dict | None = None, name: str = "") -> tuple[Pipeline, pd.DataFrame, pd.Series, dict]:
+    """
+    Enhanced grid search that returns additional information for standardized saving.
+    
+    This is an enhanced version of run_grid_search that returns test data and training info
+    needed for comprehensive model saving with metrics and metadata.
+    
+    Args:
+        filtered_data: DataFrame containing methylation features
+        design: DataFrame containing cancer type labels in 'cancerType' column
+        model_type: Type of model to use ('svm' or 'random_forest')
+        custom_param_grid: Optional custom parameter grid. If None, uses default for model type
+        name: Optional name identifier for the model
+        
+    Returns:
+        tuple: (best_model, X_test, y_test, training_info) where:
+            - best_model is the fitted Pipeline with best parameters
+            - X_test is the held-out test features
+            - y_test is the held-out test labels
+            - training_info contains training configuration and results
+    """
+    logger.info(f"Starting enhanced grid search for model type: {model_type}")
+    logger.info(f"Initial training dataset shape: {filtered_data.shape}")
+    
+    df = filtered_data.dropna(axis="columns")
+    df.columns = df.columns.astype(str)
+    logger.info(f"Actual training dataset shape: {df.shape}")
+
+    logger.info("Splitting data for training/validation")
+    X_train, X_test, y_train, y_test = train_test_split(
+        df, 
+        design["cancerType"], 
+        test_size=0.2, 
+        random_state=42
+    )
+    X_train.columns = X_train.columns.astype(str)
+    X_test.columns = X_test.columns.astype(str)
+
+    logger.info(f"Setting up {model_type} model")
+    model, default_param_grid = get_model_config(model_type)
+    param_grid = custom_param_grid if custom_param_grid is not None else default_param_grid
+
+    logger.info("Defining pipeline components")
+    differential_methylation = DifferentialMethylation()
+    
+    # Get grid search parameters from config
+    config = load_model_config()
+    grid_search_params = config['grid_search_config']
+    stratified_cv = StratifiedKFold(n_splits=grid_search_params['n_splits'], shuffle=True, random_state=42)
+
+    logger.info("Defining pipeline")
+    pipeline = Pipeline([
+        ("differentialMethylation", differential_methylation),
+        ('scaling', StandardScaler()),
+        ('modelGeneration', model)
+    ])
+    
+    # Record start time for training info
+    training_start_time = time.time()
+    
+    search = GridSearchCV(
+        pipeline,
+        param_grid=param_grid,
+        scoring=grid_search_params['scoring'],
+        cv=stratified_cv,
+        verbose=grid_search_params['verbose'],
+        n_jobs=grid_search_params['n_jobs'],
+        error_score=grid_search_params['error_score']
+    )
+    
+    logger.info(f"Fitting {model_type} models")
+    search.fit(X_train, y_train)
+    
+    training_end_time = time.time()
+    training_duration = training_end_time - training_start_time
+
+    best_model = search.best_estimator_
+    logger.info(f"Best model parameters: {search.best_params_}")
+    logger.info(f"Best cross-validation score: {search.best_score_:.3f}")
+
+    # Collect training information
+    training_info = {
+        "best_params": search.best_params_,
+        "best_cv_score": float(search.best_score_),
+        "cv_results_summary": {
+            "mean_test_scores": [float(score) for score in search.cv_results_['mean_test_score']],
+            "std_test_scores": [float(score) for score in search.cv_results_['std_test_score']],
+            "mean_fit_times": [float(time) for time in search.cv_results_['mean_fit_time']],
+        },
+        "training_duration_seconds": training_duration,
+        "cross_validation_folds": grid_search_params['n_splits'],
+        "scoring_metric": grid_search_params['scoring'],
+        "param_grid": param_grid,
+        "train_set_size": len(X_train),
+        "test_set_size": len(X_test),
+        "original_feature_count": filtered_data.shape[1],
+        "final_feature_count": df.shape[1]
+    }
+
+    return best_model, X_test, y_test, training_info

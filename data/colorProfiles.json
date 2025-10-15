@@ -1,0 +1,20 @@
+{
+  "default": "#1f77b4",
+  "cancer": "#ff7f0e",
+  "normal": "#2ca02c",
+  "unknown": "#d62728",
+  "primary": "#9467bd",
+  "metastatic": "#8c564b",
+  "benign": "#e377c2",
+  "malignant": "#7f7f7f",
+  "low_grade": "#bcbd22",
+  "high_grade": "#17becf",
+  "brain": "#ff9999",
+  "breast": "#66b3ff",
+  "lung": "#99ff99",
+  "prostate": "#ffcc99",
+  "colon": "#ff99cc",
+  "leukemia": "#c2c2f0",
+  "lymphoma": "#ffb3e6",
+  "sarcoma": "#c4e17f"
+}

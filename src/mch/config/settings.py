@@ -6,8 +6,7 @@ import json
 import polars as pl
 import polars as pl
 
-#from mch.core.disease_tree import DiseaseTree
-from mch.core.diseaseTree import DiseaseTree
+from mch.core.disease_tree import DiseaseTree
 from mch.config.base_config import FREEZE, FREEZE_NUMBER, WORKING_DIRECTORY
 
 # Database settings
@@ -88,8 +87,8 @@ def safe_load_json(file_path, default=None):
 def load_data():
     """Load and cache all necessary data files with existence checks."""
     #mvalue_path = FREEZE_DIR / f"featureValuesWithNewSamples{FREEZE_NUMBER}.csv"
-    mvalue_path = FREEZE_DIR / f"methylation_HG38_m_value_feature_values.csv"
-    tree_path = FREEZE_DIR / "diseaseTree.joblib"
+    mvalue_path = FREEZE_DIR / f"MValue_concat.csv"
+    tree_path = FREEZE_DIR / "diseaseTree_mapped.joblib"
     color_path = DATA_DIR / "colorProfiles.json"
 
     # Load files safely with null defaults

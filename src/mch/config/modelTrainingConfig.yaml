@@ -1,0 +1,69 @@
+# Model Training Configuration
+# This file contains all configuration parameters for research-grade model training
+
+# Results and output directories
+resultsDirectory: "results/models_research_standard"
+
+# Grid search configuration
+grid_search_config:
+  n_splits: 5  # Number of cross-validation folds
+  scoring: "accuracy"  # Scoring metric for model selection
+  verbose: 1  # Verbosity level for grid search
+  n_jobs: -1  # Number of parallel jobs (-1 uses all processors)
+  error_score: "raise"  # How to handle errors during grid search
+
+# Default model type (can be overridden)
+default_model_type: "svm"
+
+# Parameter grids for different model types
+parameter_grid:
+  svm:
+    modelGeneration__C: [0.1, 1, 10, 100]
+    modelGeneration__gamma: ["scale", "auto", 0.001, 0.01, 0.1, 1]
+    modelGeneration__kernel: ["rbf", "linear"]
+    differentialMethylation__n_features: [100, 500, 1000, 2000]
+  
+  random_forest:
+    modelGeneration__n_estimators: [100, 200, 300]
+    modelGeneration__max_depth: [10, 20, 30, null]
+    modelGeneration__min_samples_split: [2, 5, 10]
+    modelGeneration__min_samples_leaf: [1, 2, 4]
+    differentialMethylation__n_features: [100, 500, 1000, 2000]
+
+# Data preprocessing configuration
+preprocessing:
+  test_size: 0.2  # Fraction of data for testing
+  random_state: 42  # Random seed for reproducibility
+  stratify: true  # Whether to stratify train/test split
+
+# Feature selection configuration
+feature_selection:
+  method: "differential_methylation"  # Method for feature selection
+  default_n_features: 1000  # Default number of features to select
+
+# Model persistence configuration
+persistence:
+  save_test_predictions: true  # Whether to save test set predictions
+  save_feature_importances: true  # Whether to save feature importances
+  include_cross_validation_results: true  # Whether to include detailed CV results
+  compress_models: false  # Whether to compress saved models
+
+# Logging configuration
+logging:
+  level: "INFO"  # Logging level
+  save_logs: true  # Whether to save logs to file
+  log_directory: "logs"  # Directory for log files
+
+# Research metadata
+research_config:
+  project_name: "Methylation Hierarchical Classification"
+  version: "1.0.0"
+  description: "Research-grade hierarchical classification of cancer types using DNA methylation data"
+  author: "Research Team"
+  institution: "UNSW"
+  
+# Quality control thresholds
+quality_control:
+  min_samples_per_class: 10  # Minimum samples required per class
+  max_class_imbalance_ratio: 10  # Maximum allowed ratio between largest and smallest class
+  min_features_after_filtering: 100  # Minimum features required after preprocessing

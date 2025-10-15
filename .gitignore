@@ -2,20 +2,29 @@
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
-src/config/base_config.yaml
 
-# ignore all data files
-data/
-
-# ignore the python environment files
+# Python environment files
 mhcenv/
+hw_9900/
 .venv/
 .vscode/
+
+# Allow important config files (override data/ ignore)
+!data/colorProfiles.json
+!src/mch/config/base_config.yaml
+!src/mch/config/modelTrainingConfig.yaml
+
+# Ignore large data files but keep small config files
+data/*.csv
+data/*.parquet
+data/*.h5ad
+data/freeze*/
+data/__MACOSX/
 # Node artifact files
 node_modules/
 dist/
 
-# ignore results directoy
+# ignore results directory (model outputs)
 results/
 
 # Compiled Java class files
@@ -60,4 +69,7 @@ Thumbs.db
 *.wmv
 
 src/mch/api/hc-api.plist
-src/mch/config/base_config.yaml
+
+# Allow our new config files to be tracked
+# src/mch/config/base_config.yaml  (commented out - we want to track this)
+# src/mch/config/modelTrainingConfig.yaml  (we want to track this)
