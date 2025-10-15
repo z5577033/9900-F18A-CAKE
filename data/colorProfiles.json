@@ -1,0 +1,7 @@
+{
+    "Leukaemia": "#FF0000",
+    "Lymphonma": "#00FF00",
+    "SolidTumor": "#0000FF",
+    "Other": "#FFFF00"
+
+}

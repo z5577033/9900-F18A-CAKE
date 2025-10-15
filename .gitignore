@@ -2,10 +2,11 @@
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
-src/config/base_config.yaml
+#  src/config/base_config.yaml
 
 # ignore all data files
-data/
+# data/
+*.csv
 
 # ignore the python environment files
 mhcenv/
@@ -60,4 +61,4 @@ Thumbs.db
 *.wmv
 
 src/mch/api/hc-api.plist
-src/mch/config/base_config.yaml
+# src/mch/config/base_config.yaml
