@@ -1,0 +1,18 @@
+services:
+  mch:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: mch-dev:latest
+    container_name: mch-dev
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app/src
+    volumes:
+      - ./src:/app/src:rw
+      - ./data:/app/data:rw
+      - ./requirements-min.txt:/tmp/requirements.txt:ro
+    command: >
+      uvicorn mch.api.app:app
+      --host 0.0.0.0 --port 8000 --reload
