@@ -1,5 +1,6 @@
+import joblib
 import pandas as pd
-
+import polars as pl
 from typing import Dict, List, Optional
 from pathlib import Path
 import logging
@@ -45,12 +46,16 @@ class BatchModelTrainer:
                 logging.info(f"Training model for node: {node}")
                 
                 # Prepare data for this node
-                nodeData, design = self._prepare_node_data(node)
- 
-                if type(nodeData)== None:
-                    pass
+                result = self._prepare_node_data(node)
+                if result is None:
+                    continue
+                nodeData, design = result
                 
                 X_train, X_test, y_train, y_test = train_test_split(nodeData,  design["cancerType"], test_size=0.2, random_state=42)
+                X_train = X_train.to_pandas()
+                X_test = X_test.to_pandas()
+                y_train = y_train.to_pandas()
+                y_test = y_test.to_pandas()
                 
                 differentialMethylation = DifferentialMethylation()
                 randomForest = RandomForestClassifier(random_state=42, n_jobs=5)
@@ -103,12 +108,23 @@ class BatchModelTrainer:
     def _prepare_node_data(self, node: str):
         """Prepare training data for a specific node."""
         #print(f"Constructing dataset for {node}")
-        truthValues = pd.Series(["otherCancerType"] * len(mvalue_df["sample_id"]))
-        design = pd.DataFrame({"sample_id": mvalue_df.sample_id, "cancerType": truthValues.values})
+        # truthValues = pd.Series(["otherCancerType"] * len(mvalue_df["biosample_id"]))
+        # design = pd.DataFrame({"biosample_id": mvalue_df["biosample_id"], "cancerType": truthValues.values})
+
+        print(f"{node} origin data count:", mvalue_df.height)
+        print(f"{node} mvalue_df columns:", mvalue_df.columns[:5])
+
+        truthValues = ["otherCancerType"] * mvalue_df.height
+        design = pl.DataFrame({
+            "biosample_id": mvalue_df["biosample_id"],
+            "cancerType": truthValues
+        })
+
 
         # find the node in the main tree corresponding to this particular cancer type.
         diseaseTree = main_tree.find_node_by_name(node)
         diseaseSamples = diseaseTree.get_samples_recursive()
+        print(f"{node} diseaseSamples count:", len(diseaseSamples))
 
         # get the names of the children of that cancer type and the samples associated with each of them
         for cancer in diseaseTree.get_child_names():
@@ -121,7 +137,11 @@ class BatchModelTrainer:
             # this means that the samples of the child node remain in the training data, but it will never be used 
             # as a comparator in the differential methylation step. 
             if len(samples) >= 3:
-                design.loc[design['sample_id'].isin(samples), 'cancerType'] = cancer
+                # design.loc[design['biosample_id'].isin(samples), 'cancerType'] = cancer
+                mask = design["biosample_id"].is_in(samples)
+                design = design.with_columns([
+                    pl.when(mask).then(cancer).otherwise(pl.col("cancerType")).alias("cancerType")
+                ])
 
         # this records the samples that we have data for, but are missing from the oncotree. I don't think we need this. 
         # it will only record those few samples that have been missed on the latest update of the oncotree
@@ -134,30 +154,49 @@ class BatchModelTrainer:
         # filteredData = filteredData[design.cancerType != "otherCancerType"]
         # design = design[design.cancerType != "otherCancerType"]
 
-        filteredData = mvalue_df[mvalue_df["sample_id"].isin(diseaseSamples)]
-        design = design[design["sample_id"].isin(filteredData["sample_id"])]
+        print(f"{node} diseaseSamples Sample:", diseaseSamples[:5])
+        print(f"{node} diseaseSamples Type:", type(diseaseSamples[0]) if diseaseSamples else None)
+        print(f"{node} biosample_id Sample:", mvalue_df['biosample_id'][:5].to_list())
+        print(f"{node} biosample_id Type:", type(mvalue_df['biosample_id'][0]) if mvalue_df['biosample_id'].len() > 0 else None)
 
-        print(node, filteredData.shape, design.shape)
+        biosample_ids = set(mvalue_df["biosample_id"].to_list())
+        diseaseSamples_set = set(diseaseSamples)
+        intersection = biosample_ids & diseaseSamples_set
+        print(f"{node} joint count: {len(intersection)}")
+        print(f"{node} joint samples: {list(intersection)[:5]}")
+
+        # filteredData = mvalue_df[mvalue_df["biosample_id"].isin(diseaseSamples)]
+        filteredData = mvalue_df.filter(pl.col("biosample_id").is_in(diseaseSamples))
+        # design = design[design["biosample_id"].isin(filteredData["biosample_id"])]
+        design = design.filter(pl.col("biosample_id").is_in(filteredData["biosample_id"].to_list()))
+
+        print(f"{node} Data after filter:", filteredData.height)
+        print(f"{node} Data after design filter:", design.height)
+
+        print(node, filteredData.height, design.height)
 
         # an entire category with only ten samples isn't sufficiently informative.
         # this should filter any small cancer types and cancers/oncotree nodes with no children types.
-        if len(filteredData["sample_id"]) < 10:
+        if filteredData["biosample_id"].len() < 10:
             print(f"Skipping, {node} has fewer than 10 samples")
             return None
 
         
-        filteredDataset = filteredData.dropna(axis="columns")
+        # filteredDataset = filteredData.dropna(axis="columns")
+        filteredDataset = filteredData.drop_nulls()
 
         # there was another filter here ...
         # making sure there were at least nfolds number of samples for each child category?
-        valueCounts = design.cancerType.value_counts()
+        # valueCounts = design.cancerType.value_counts()
+        valueCounts = design["cancerType"].value_counts()
 
         # make sure there are at least two groups being passed back
         if len(design["cancerType"].unique()) <2:
             print(f"Skipping, there is only one subgroup of {diseaseTree.name}")
             return None
 
-        return filteredData, pd.DataFrame({"cancerType": design.cancerType})
+        print(f"design type：", type(design))
+        return filteredData, design
             # Implementation from your existing code
     
     def _save_model(self, node: str, model: RandomForestClassifier, save_dir: Path):

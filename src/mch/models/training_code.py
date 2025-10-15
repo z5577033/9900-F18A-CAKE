@@ -19,7 +19,7 @@ class NodeTrainer:
                  X_train: Union[pl.DataFrame, np.ndarray] = None,
                  y_train: Union[pl.Series, np.ndarray] = None,
                  X_test: Union[pl.DataFrame, np.ndarray] = None,
-                 y_train: Union[pl.Series, np.ndarray] = None,
+                #  y_train: Union[pl.Series, np.ndarray] = None,
                  param_grid: Dict = None,
                  n_jobs: int = -1,
                  cv: int = 5,

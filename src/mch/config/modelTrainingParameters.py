@@ -3,7 +3,7 @@ from pathlib import Path
 
 # Load variables from refinement.yaml
 def load_refinement_config():
-    yaml_file_path = Path(__file__).resolve().parent / 'modelTrainingConfig.yaml'
+    yaml_file_path = Path(__file__).resolve().parent / 'model_training_config.yaml'
     
     try:
         with open(yaml_file_path, 'r') as yaml_file:

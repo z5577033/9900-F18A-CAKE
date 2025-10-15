@@ -7,7 +7,7 @@ import polars as pl
 import polars as pl
 
 #from mch.core.disease_tree import DiseaseTree
-from mch.core.diseaseTree import DiseaseTree
+from mch.core.disease_tree import DiseaseTree
 from mch.config.base_config import FREEZE, FREEZE_NUMBER, WORKING_DIRECTORY
 
 # Database settings
@@ -88,8 +88,8 @@ def safe_load_json(file_path, default=None):
 def load_data():
     """Load and cache all necessary data files with existence checks."""
     #mvalue_path = FREEZE_DIR / f"featureValuesWithNewSamples{FREEZE_NUMBER}.csv"
-    mvalue_path = FREEZE_DIR / f"methylation_HG38_m_value_feature_values.csv"
-    tree_path = FREEZE_DIR / "diseaseTree.joblib"
+    mvalue_path = FREEZE_DIR / f"MValue_concat_1.csv"
+    tree_path = FREEZE_DIR / "diseaseTree_mapped.joblib"
     color_path = DATA_DIR / "colorProfiles.json"
 
     # Load files safely with null defaults
@@ -112,7 +112,7 @@ who_book_file = f"{FREEZE_DIR}/who_book.json"
 cancer_type_file = f"{FREEZE_DIR}/cancer_types.csv"
 # Load additional CSV with safety check
 #base_mvalue_df = safe_load_csv(f"{FREEZE_DIR}/featureValues{FREEZE_NUMBER}.csv")
-base_mvalue_df = safe_load_csv(f"{FREEZE_DIR}/methylation_HG38_m_value_feature_values.csv")
+base_mvalue_df = safe_load_csv(f"{FREEZE_DIR}/MValue_concat_1.csv")
 #base_mvalue_df = pl.read_csv(f"{FREEZE_DIR}/featureValues{FREEZE_NUMBER}.csv")
 
 def validate_critical_data():
