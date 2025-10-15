@@ -1,0 +1,6 @@
+# 基础配置文件
+freeze: "freeze0525"
+working_directory: "/app/results"
+
+# 直接指向我们真实的、位于 /app/data/ 目录下的数据文件
+base_m_values_path: "/app/data/MValue_polaris_pivot_0.csv"

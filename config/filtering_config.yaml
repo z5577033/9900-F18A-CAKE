@@ -1,0 +1,11 @@
+# Data filtering configuration
+
+# Input file paths
+base_m_value_file: "/app/data/MValue_polaris_pivot_0.csv"
+
+# Placeholder for the metadata file we are waiting for.
+# The script will report an error that this is missing, which is expected for now.
+probe_metadata_file: "/app/data/epicV2ManifestAlternate.csv" 
+
+# Output file path (results will be saved here)
+filtered_m_value_file: "/app/results/filtered_m_values.parquet"
