@@ -7,7 +7,7 @@ import polars as pl
 import polars as pl
 
 #from mch.core.disease_tree import DiseaseTree
-from mch.core.diseaseTree import DiseaseTree
+from mch.core.disease_tree import DiseaseTree
 from mch.config.base_config import FREEZE, FREEZE_NUMBER, WORKING_DIRECTORY
 
 # Database settings
