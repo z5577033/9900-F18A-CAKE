@@ -5,3 +5,9 @@ pydantic
 sqlalchemy
 sqlmodel
 pyyaml
+numpy
+pandas
+scikit-learn
+joblib
+umap-learn
+matplotlib

@@ -2,3 +2,6 @@ freeze: "data/freeze0525"
 freeze_number: "0525"
 working_directory: "."
 credential_file: ""
+
+mvalues_path: "datasets/Mvalue_concat.csv"
+id_column: "biosample_id"
