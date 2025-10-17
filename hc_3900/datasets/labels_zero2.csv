@@ -1,0 +1,101 @@
+biosample_id,label,patient_id
+SYN_01_001,Central nervous system,PT01_001
+SYN_01_002,Central nervous system,PT01_001
+SYN_01_003,Central nervous system,PT01_002
+SYN_01_004,Central nervous system,PT01_002
+SYN_01_005,Central nervous system,PT01_003
+SYN_01_006,Central nervous system,PT01_003
+SYN_01_007,Central nervous system,PT01_004
+SYN_01_008,Central nervous system,PT01_004
+SYN_01_009,Central nervous system,PT01_005
+SYN_01_010,Central nervous system,PT01_005
+SYN_01_011,Central nervous system,PT01_006
+SYN_01_012,Central nervous system,PT01_006
+SYN_01_013,Central nervous system,PT01_007
+SYN_01_014,Central nervous system,PT01_007
+SYN_01_015,Central nervous system,PT01_008
+SYN_01_016,Central nervous system,PT01_008
+SYN_01_017,Central nervous system,PT01_009
+SYN_01_018,Central nervous system,PT01_009
+SYN_01_019,Central nervous system,PT01_010
+SYN_01_020,Central nervous system,PT01_010
+SYN_02_001,Haematological malignancy,PT02_001
+SYN_02_002,Haematological malignancy,PT02_001
+SYN_02_003,Haematological malignancy,PT02_002
+SYN_02_004,Haematological malignancy,PT02_002
+SYN_02_005,Haematological malignancy,PT02_003
+SYN_02_006,Haematological malignancy,PT02_003
+SYN_02_007,Haematological malignancy,PT02_004
+SYN_02_008,Haematological malignancy,PT02_004
+SYN_02_009,Haematological malignancy,PT02_005
+SYN_02_010,Haematological malignancy,PT02_005
+SYN_02_011,Haematological malignancy,PT02_006
+SYN_02_012,Haematological malignancy,PT02_006
+SYN_02_013,Haematological malignancy,PT02_007
+SYN_02_014,Haematological malignancy,PT02_007
+SYN_02_015,Haematological malignancy,PT02_008
+SYN_02_016,Haematological malignancy,PT02_008
+SYN_02_017,Haematological malignancy,PT02_009
+SYN_02_018,Haematological malignancy,PT02_009
+SYN_02_019,Haematological malignancy,PT02_010
+SYN_02_020,Haematological malignancy,PT02_010
+SYN_03_001,Sarcoma,PT03_001
+SYN_03_002,Sarcoma,PT03_001
+SYN_03_003,Sarcoma,PT03_002
+SYN_03_004,Sarcoma,PT03_002
+SYN_03_005,Sarcoma,PT03_003
+SYN_03_006,Sarcoma,PT03_003
+SYN_03_007,Sarcoma,PT03_004
+SYN_03_008,Sarcoma,PT03_004
+SYN_03_009,Sarcoma,PT03_005
+SYN_03_010,Sarcoma,PT03_005
+SYN_03_011,Sarcoma,PT03_006
+SYN_03_012,Sarcoma,PT03_006
+SYN_03_013,Sarcoma,PT03_007
+SYN_03_014,Sarcoma,PT03_007
+SYN_03_015,Sarcoma,PT03_008
+SYN_03_016,Sarcoma,PT03_008
+SYN_03_017,Sarcoma,PT03_009
+SYN_03_018,Sarcoma,PT03_009
+SYN_03_019,Sarcoma,PT03_010
+SYN_03_020,Sarcoma,PT03_010
+SYN_04_001,Neuroblastoma,PT04_001
+SYN_04_002,Neuroblastoma,PT04_001
+SYN_04_003,Neuroblastoma,PT04_002
+SYN_04_004,Neuroblastoma,PT04_002
+SYN_04_005,Neuroblastoma,PT04_003
+SYN_04_006,Neuroblastoma,PT04_003
+SYN_04_007,Neuroblastoma,PT04_004
+SYN_04_008,Neuroblastoma,PT04_004
+SYN_04_009,Neuroblastoma,PT04_005
+SYN_04_010,Neuroblastoma,PT04_005
+SYN_04_011,Neuroblastoma,PT04_006
+SYN_04_012,Neuroblastoma,PT04_006
+SYN_04_013,Neuroblastoma,PT04_007
+SYN_04_014,Neuroblastoma,PT04_007
+SYN_04_015,Neuroblastoma,PT04_008
+SYN_04_016,Neuroblastoma,PT04_008
+SYN_04_017,Neuroblastoma,PT04_009
+SYN_04_018,Neuroblastoma,PT04_009
+SYN_04_019,Neuroblastoma,PT04_010
+SYN_04_020,Neuroblastoma,PT04_010
+SYN_05_001,Solid tumour,PT05_001
+SYN_05_002,Solid tumour,PT05_001
+SYN_05_003,Solid tumour,PT05_002
+SYN_05_004,Solid tumour,PT05_002
+SYN_05_005,Solid tumour,PT05_003
+SYN_05_006,Solid tumour,PT05_003
+SYN_05_007,Solid tumour,PT05_004
+SYN_05_008,Solid tumour,PT05_004
+SYN_05_009,Solid tumour,PT05_005
+SYN_05_010,Solid tumour,PT05_005
+SYN_05_011,Solid tumour,PT05_006
+SYN_05_012,Solid tumour,PT05_006
+SYN_05_013,Solid tumour,PT05_007
+SYN_05_014,Solid tumour,PT05_007
+SYN_05_015,Solid tumour,PT05_008
+SYN_05_016,Solid tumour,PT05_008
+SYN_05_017,Solid tumour,PT05_009
+SYN_05_018,Solid tumour,PT05_009
+SYN_05_019,Solid tumour,PT05_010
+SYN_05_020,Solid tumour,PT05_010
