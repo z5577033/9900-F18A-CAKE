@@ -4,11 +4,9 @@ import pandas as pd
 import numpy as np
 import uuid
 
-#import methylize
-
-
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.utils.validation import check_array
+from sklearn.exceptions import NotFittedError
 
 import os
 os.environ["R_ENABLE_JIT"] = "0"
@@ -99,18 +97,32 @@ class DifferentialMethylation(BaseEstimator, TransformerMixin):
         return result
 
     def run_r_script(self, data_filename, design_filename):
-        r_script_path = Path(__file__).resolve().parent.parent / 'scripts' / 'differentialMethylation.R'
-        r_environment = robjects.r('options(rpy2_quiet = TRUE)')  # This suppresses R startup messages
-
-        r_environment.source(str(r_script_path))
-        runDM = r_environment["runDM"]
-        
+        # 修正：脚本路径就在 models 目录
+        r_script_path = Path(__file__).with_name('differentialMethylation.R')
+        if not r_script_path.exists():
+            raise FileNotFoundError(f"R script not found: {r_script_path}")
+        # 仅设置选项，不把返回当环境
+        robjects.r('options(rpy2_quiet = TRUE)')
+        # 正确 source：调用 R 的 source 函数
+        robjects.r["source"](str(r_script_path))
+        # 函数在全局环境中
+        runDM = robjects.globalenv["runDM"]
         fit = runDM(data_filename, design_filename)
-
+        # 转 Python 对象
         with (robjects.default_converter + pandas2ri.converter).context():
-            dm_probes = robjects.conversion.get_conversion().rpy2py(fit)
-
-        return dm_probes.index.to_list()
+            py_obj = robjects.conversion.get_conversion().rpy2py(fit)
+        # 兼容多种返回：DataFrame/Series/向量
+        probes = []
+        if isinstance(py_obj, pd.DataFrame):
+            if py_obj.index.size > 0:
+                probes = list(py_obj.index.astype(str))
+            else:
+                probes = [str(c) for c in py_obj.columns if c not in ("sampleId","cancerType","Name")]
+        elif isinstance(py_obj, (pd.Series, list, tuple, np.ndarray)):
+            probes = [str(x) for x in (py_obj.tolist() if hasattr(py_obj, "tolist") else list(py_obj))]
+        else:
+            logging.warning("runDM returned unsupported type: %s; fallback to empty list", type(py_obj))
+        return probes
 
     def convert_to_arrow(self, df):
         schema_fields = []
