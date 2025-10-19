@@ -1,0 +1,243 @@
+2025-10-19 11:25:21,689 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 11:25:29,752 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 11:25:32,981 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 11:25:33,047 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 61, in train_all_models
+    result = self._prepare_node_data(node)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/training.py", line 152, in _prepare_node_data
+    design = design.with_columns([
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/polars/dataframe/frame.py", line 8634, in with_columns
+    return self.lazy().with_columns(*exprs, **named_exprs).collect(_eager=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/polars/lazyframe/frame.py", line 1967, in collect
+    return wrap_df(ldf.collect(callback))
+                   ^^^^^^^^^^^^^^^^^^^^^
+polars.exceptions.ColumnNotFoundError: Histiocytosis
+2025-10-19 11:38:27,637 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 11:38:37,399 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 11:38:40,756 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 11:39:14,108 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 92, in train_all_models
+    search.fit(X_train, y_train)
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'param_grid' parameter of GridSearchCV must be an instance of 'dict' or an instance of 'list'. Got None instead.
+2025-10-19 11:48:39,082 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 11:48:47,655 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 11:48:50,920 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 11:49:24,056 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 11:50:49,091 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 85, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/differentialMethylationClassifier.py", line 48, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/differentialMethylationClassifier.py", line 93, in runDifferentialMethylation
+    result = self.run_r_script(dataFilename, designFilename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/differentialMethylationClassifier.py", line 105, in run_r_script
+    r_environment.source(str(r_script_path))
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'source'
+2025-10-19 12:10:30,768 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 12:10:38,672 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 12:10:41,531 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 12:11:14,707 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 12:12:36,615 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 85, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/differentialMethylationClassifier.py", line 91, in runDifferentialMethylation
+    result = self.run_r_script(dataFilename, designFilename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/mch/models/differentialMethylationClassifier.py", line 107, in run_r_script
+    robjects.r["source"](str(r_script_path))
+  File "/opt/venv/lib/python3.12/site-packages/rpy2/robjects/functions.py", line 208, in __call__
+    return (super(SignatureTranslatedFunction, self)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/rpy2/robjects/functions.py", line 131, in __call__
+    res = super(Function, self).__call__(*new_args, **new_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/rpy2/rinterface_lib/conversion.py", line 45, in _
+    cdata = function(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/rpy2/rinterface.py", line 869, in __call__
+    raise embedded.RRuntimeError(_rinterface._geterrmessage())
+rpy2.rinterface_lib.embedded.RRuntimeError: Error in library("limma", quiet = TRUE) : 
+  there is no package called ‘limma’
+
+2025-10-19 12:31:29,390 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 12:31:36,713 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 12:31:39,949 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 12:32:13,168 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 12:47:57,014 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 12:48:04,938 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 12:48:07,731 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 12:48:41,237 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 13:09:24,448 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 13:09:31,998 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 13:09:35,483 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 13:09:53,758 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 13:18:20,844 INFO mch.training: Training model for node: Neuroblastoma
+2025-10-19 13:18:27,733 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-10-19 13:18:30,790 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 13:18:48,736 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 13:36:21,486 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 13:36:43,392 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 82, in train_all_models
+    var = X_train[feat_cols].var(axis=0, skipna=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 11734, in var
+    result = super().var(axis, skipna, ddof, numeric_only, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12346, in var
+    return self._stat_function_ddof(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 12322, in _stat_function_ddof
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 11562, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 1500, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/internals/blocks.py", line 404, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 11481, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 85, in _f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/pandas/core/nanops.py", line 1016, in nanvar
+    sqr = _ensure_numeric((avg - values) ** 2)
+                           ~~~~^~~~~~~~
+TypeError: unsupported operand type(s) for -: 'float' and 'str'
+2025-10-19 13:53:35,906 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 14:15:39,810 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 14:15:45,942 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 72, in train_all_models
+    topk = int(self.prefilter_topk)
+               ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BatchModelTrainer' object has no attribute 'prefilter_topk'
+2025-10-19 14:27:36,995 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 14:43:58,261 INFO mch.training: Only training specified node: Haematological malignancy
+2025-10-19 14:43:58,262 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 14:53:10,377 INFO mch.training: Only training specified node: Haematological malignancy
+2025-10-19 14:53:10,377 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 15:07:09,905 INFO mch.training: Only training specified node: Haematological malignancy
+2025-10-19 15:07:09,906 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 15:07:16,629 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=50, scan_max=2000, chunk_size=500
+2025-10-19 15:07:16,774 INFO mch.training: Prefilter progress: scanned 500/2000 columns
+2025-10-19 15:07:16,929 INFO mch.training: Prefilter progress: scanned 1000/2000 columns
+2025-10-19 15:07:17,055 INFO mch.training: Prefilter progress: scanned 1500/2000 columns
+2025-10-19 15:07:17,192 INFO mch.training: Prefilter progress: scanned 2000/2000 columns
+2025-10-19 15:07:17,357 INFO mch.training: Prefilter done: kept 50 features
+2025-10-19 15:07:17,432 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/app/src/mch/models/training.py", line 105, in train_all_models
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2806, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 1843, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "/opt/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py", line 2252, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-10-19 15:18:06,290 INFO mch.training: Only training specified node: Haematological malignancy
+2025-10-19 15:18:06,291 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 15:18:15,004 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=50, scan_max=2000, chunk_size=500
+2025-10-19 15:18:15,203 INFO mch.training: Prefilter progress: scanned 500/2000 columns
+2025-10-19 15:18:15,329 INFO mch.training: Prefilter progress: scanned 1000/2000 columns
+2025-10-19 15:18:15,600 INFO mch.training: Prefilter progress: scanned 1500/2000 columns
+2025-10-19 15:18:15,758 INFO mch.training: Prefilter progress: scanned 2000/2000 columns
+2025-10-19 15:18:15,914 INFO mch.training: Prefilter done: kept 50 features
+2025-10-19 15:18:15,957 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-10-19 15:18:15,969 INFO mch.training: Train/Test shapes: X_train=(85, 50), X_test=(22, 50)
+2025-10-19 15:18:15,969 INFO mch.training: DM disabled
+2025-10-19 15:18:15,970 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-10-19 15:18:15,970 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 15:18:16,022 INFO mch.training: Model trained for Haematological malignancy, not saved
+2025-10-19 15:26:24,105 INFO mch.training: Only training specified node: Haematological malignancy
+2025-10-19 15:26:24,106 INFO mch.training: Training model for node: Haematological malignancy
+2025-10-19 15:26:31,647 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=50, scan_max=3000, chunk_size=500
+2025-10-19 15:26:31,875 INFO mch.training: Prefilter progress: scanned 500/3000 columns
+2025-10-19 15:26:32,031 INFO mch.training: Prefilter progress: scanned 1000/3000 columns
+2025-10-19 15:26:32,182 INFO mch.training: Prefilter progress: scanned 1500/3000 columns
+2025-10-19 15:26:32,320 INFO mch.training: Prefilter progress: scanned 2000/3000 columns
+2025-10-19 15:26:32,493 INFO mch.training: Prefilter progress: scanned 2500/3000 columns
+2025-10-19 15:26:32,621 INFO mch.training: Prefilter progress: scanned 3000/3000 columns
+2025-10-19 15:26:32,785 INFO mch.training: Prefilter done: kept 50 features
+2025-10-19 15:26:33,135 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-10-19 15:26:33,222 INFO mch.training: Train/Test shapes: X_train=(85, 50), X_test=(22, 50)
+2025-10-19 15:26:33,229 INFO mch.training: DM disabled
+2025-10-19 15:26:33,233 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-10-19 15:26:33,235 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-10-19 15:26:33,380 INFO mch.training: Test accuracy: 0.8182, macro_f1: 0.3000, weighted_f1: 0.7773
+2025-10-19 15:26:33,385 INFO mch.training: Model trained for Haematological malignancy, not saved
