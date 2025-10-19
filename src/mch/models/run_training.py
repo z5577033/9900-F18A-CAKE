@@ -15,8 +15,8 @@ def main():
     ap.add_argument("--cv-n-jobs", type=int, default=1)
     ap.add_argument("--only-node", type=str, default=None, help="only train specified node")
     ap.add_argument("--prefilter-topk", type=int, default=200)
-    ap.add_argument("--prefilter-scan-max", type=int, default=5000)     # 限额扫描
-    ap.add_argument("--prefilter-chunk-size", type=int, default=1000)   # 分块大小
+    ap.add_argument("--prefilter-scan-max", type=int, default=5000)     # limit scanning to top N features
+    ap.add_argument("--prefilter-chunk-size", type=int, default=1000)   # Max columns per chunk
     args = ap.parse_args()
 
     if args.disable_dm:

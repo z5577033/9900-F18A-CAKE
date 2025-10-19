@@ -22,9 +22,13 @@ if not logger.handlers:
     logger.addHandler(fh); logger.addHandler(sh)
 
 def _prefilter_polars_chunked(df_pl: pl.DataFrame, topk: int, id_col: str = "biosample_id"):
-    """按列方差挑前 topk 个特征，分块+限额扫描，降低内存峰值。返回(精简后的 df, 被保留列名)。"""
-    scan_max = int(os.getenv("MCH_PREFILTER_SCAN_MAX", "20000"))   # 最多扫描多少列
-    chunk_size = int(os.getenv("MCH_PREFILTER_CHUNK_SIZE", "5000"))  # 每块多少列
+    """
+    Select the top k features by column variance, 
+    perform block scanning, and limit the scan to reduce peak memory usage. 
+    Return the streamlined df file, preserving column names.
+    """
+    scan_max = int(os.getenv("MCH_PREFILTER_SCAN_MAX", "20000"))   # Max columns to scan
+    chunk_size = int(os.getenv("MCH_PREFILTER_CHUNK_SIZE", "5000"))  # Max columns per chunk
     feat_cols = [c for c in df_pl.columns if c != id_col]
     logger.info(
         "Prefilter start: input shape=(%d,%d), candidates=%d, topk=%d, scan_max=%d, chunk_size=%d",
@@ -38,11 +42,11 @@ def _prefilter_polars_chunked(df_pl: pl.DataFrame, topk: int, id_col: str = "bio
     if scan_max > 0:
         feat_cols = feat_cols[:min(scan_max, len(feat_cols))]
 
-    heap: list[tuple[float, str]] = []  # (var, col) 的最小堆
+    heap: list[tuple[float, str]] = []  # min-heap of (variance, column_name)
     scanned = 0
     for i in range(0, len(feat_cols), chunk_size):
         cols = feat_cols[i:i + chunk_size]
-        # 对该块的列做类型转换并计算方差
+        # calculate variance for the chunk
         var_row = df_pl.select([pl.col(c).cast(pl.Float64, strict=False).var().alias(c) for c in cols]).to_dicts()[0]
         for c, v in var_row.items():
             if v is None or not isinstance(v, (int, float)) or not math.isfinite(v):
@@ -69,7 +73,7 @@ class BatchModelTrainer:
         self.dataDirectory = DATA_DIR
         self.resultsDirectory = resultsDirectory
         self.filteredMValueFile = mvalue_df
-        # 配置用环境变量（由 run_training.py 设置）
+        # Configuration environment variables (set by run_training.py)
         self.disable_dm = (os.getenv("MCH_DISABLE_DM", "0") == "1")
         self.rf_n_jobs = int(os.getenv("RF_N_JOBS", "1"))
         self.cv_n_jobs = int(os.getenv("CV_N_JOBS", "1"))
@@ -97,14 +101,14 @@ class BatchModelTrainer:
                     continue
                 nodeData, design = result  # nodeData: pl.DataFrame, design: pl.DataFrame
 
-                # 仅在禁用 DM 时做预筛选；启用 DM 则不做预筛选（避免双重特征选择）
+                # only use top-k features after prefiltering
                 effective_topk = self.prefilter_topk if self.disable_dm else 0
                 nodeData_pf, kept_cols = _prefilter_polars_chunked(nodeData, topk=effective_topk, id_col="biosample_id")
-                # 只转保留下来的特征列为 pandas float32
+                # only keep samples present in both nodeData and design
                 X_all = nodeData_pf.select(kept_cols).to_pandas().astype("float32")
                 y_all = design["cancerType"].to_pandas()
 
-                # 丢弃样本数 < 2 的类别，避免 stratify 报错
+                # throw away rare classes (<2 samples)
                 cls_counts = y_all.value_counts()
                 rare = cls_counts[cls_counts < 2].index.tolist()
                 if rare:
@@ -113,7 +117,7 @@ class BatchModelTrainer:
                     mask = ~y_all.isin(rare)
                     X_all = X_all[mask]
                     y_all = y_all[mask]
-                # 丢完后仍需至少两个类别
+                # at least 2 classes needed
                 if y_all.nunique() < 2:
                     logger.warning("Skip %s: fewer than 2 classes after dropping rare classes", node)
                     continue
@@ -123,7 +127,7 @@ class BatchModelTrainer:
                 )
                 logger.info("Train/Test shapes: X_train=%s, X_test=%s", X_train.shape, X_test.shape)
 
-                # 构建 pipeline（真正关闭 DM：不加入 DM）
+                # build pipeline with/without DM step
                 rf = RandomForestClassifier(
                     random_state=42,
                     n_jobs=self.rf_n_jobs,
@@ -140,7 +144,7 @@ class BatchModelTrainer:
                     ])
                 logger.info("Pipeline steps: %s", list(pipeline.named_steps.keys()))
 
-                # 动态设置 CV 折数，避免最小类别样本数不足导致报错
+                # set up cross-validation dynamically based on training data
                 if not parameter_grid:
                     stratified_cv = None
                 else:
@@ -153,7 +157,7 @@ class BatchModelTrainer:
                     pipeline.fit(X_train, y_train)
                     self.models[node] = pipeline
 
-                    # 评估与统计
+                    # assess and collect stats
                     metrics = {}
                     if X_test is not None:
                         y_pred = pipeline.predict(X_test)
@@ -166,7 +170,7 @@ class BatchModelTrainer:
                         }
                         logger.info("Test accuracy: %.4f, macro_f1: %.4f, weighted_f1: %.4f",
                                     metrics["accuracy"], metrics["macro_f1"], metrics["weighted_f1"])
-                    # 特征重要度（前10）
+                    # top 10 features by importance
                     top_features = None
                     try:
                         import numpy as np
@@ -198,7 +202,7 @@ class BatchModelTrainer:
                     search.fit(X_train, y_train)
                     self.models[node] = search.best_estimator_
 
-                    # 评估与统计（GridSearch 后）
+                    # assess and collect stats (after GridSearch)
                     metrics = {}
                     if X_test is not None:
                         y_pred = self.models[node].predict(X_test)
