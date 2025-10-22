@@ -29,3 +29,6 @@ current issue:
 3. new training function entrance: /models/run_training.py  
 
 4. new logfile: /data/logs/training.log
+
+how to run:
+python /app/src/mch/models/run_training.py   --raise-on-error --disable-dm --rf-n-jobs 1 --cv-n-jobs 1   --only-node "Haematological malignancy"   --prefilter-topk 50 --prefilter-scan-max 3000 --prefilter-chunk-size 500
