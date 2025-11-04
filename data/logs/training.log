@@ -240,4 +240,644 @@ ValueError: The least populated class in y has only 1 member, which is too few. 
 2025-10-19 15:26:33,233 INFO mch.training: Pipeline steps: ['modelGeneration']
 2025-10-19 15:26:33,235 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
 2025-10-19 15:26:33,380 INFO mch.training: Test accuracy: 0.8182, macro_f1: 0.3000, weighted_f1: 0.7773
-2025-10-19 15:26:33,385 INFO mch.training: Model trained for Haematological malignancy, not saved
+2025-10-19 15:26:33,385 INFO mch.training: Model trained for Haematological malignancy, not saved2025-11-02 13:41:57,731 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-02 13:41:59,499 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-02 13:42:00,875 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-02 13:42:02,790 INFO mch.training: Training model for node: Sarcoma
+2025-11-02 13:42:04,392 INFO mch.training: Training model for node: Solid tumour
+2025-11-02 13:42:06,054 INFO mch.training: Training model for node: Central nervous system
+2025-11-02 13:42:07,284 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-02 13:47:18,468 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-02 13:47:19,888 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-02 13:47:21,104 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-02 13:47:22,661 INFO mch.training: Training model for node: Sarcoma
+2025-11-02 13:47:24,744 INFO mch.training: Training model for node: Solid tumour
+2025-11-02 13:47:26,021 INFO mch.training: Training model for node: Central nervous system
+2025-11-02 13:47:27,330 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-02 13:48:25,380 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-02 13:48:26,664 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-02 13:48:27,784 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-02 13:48:31,806 INFO mch.training: Training model for node: Sarcoma
+2025-11-02 13:48:33,100 INFO mch.training: Training model for node: Solid tumour
+2025-11-02 13:48:34,355 INFO mch.training: Training model for node: Central nervous system
+2025-11-02 13:48:35,633 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-02 13:49:43,842 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-02 13:49:45,106 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-02 13:49:46,253 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-02 13:49:47,551 INFO mch.training: Training model for node: Sarcoma
+2025-11-02 13:49:48,834 INFO mch.training: Training model for node: Solid tumour
+2025-11-02 13:49:50,146 INFO mch.training: Training model for node: Central nervous system
+2025-11-02 13:49:51,468 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-02 13:52:03,410 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-02 13:52:04,775 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-02 13:52:05,938 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-02 13:52:09,954 INFO mch.training: Training model for node: Sarcoma
+2025-11-02 13:52:11,275 INFO mch.training: Training model for node: Solid tumour
+2025-11-02 13:52:12,632 INFO mch.training: Training model for node: Central nervous system
+2025-11-02 13:52:13,799 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-02 13:57:18,145 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-02 13:57:18,604 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-02 13:57:19,063 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-02 13:57:20,237 INFO mch.training: Training model for node: Sarcoma
+2025-11-02 13:57:21,027 INFO mch.training: Training model for node: Solid tumour
+2025-11-02 13:57:21,947 INFO mch.training: Training model for node: Central nervous system
+2025-11-02 13:57:23,047 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-03 07:21:37,738 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-03 07:21:42,306 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-03 07:21:43,453 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-03 07:21:51,101 INFO mch.training: Training model for node: Sarcoma
+2025-11-03 07:21:52,261 INFO mch.training: Training model for node: Solid tumour
+2025-11-03 07:21:53,339 INFO mch.training: Training model for node: Central nervous system
+2025-11-03 07:21:54,416 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-03 14:04:10,275 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-03 14:04:17,054 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-03 14:04:23,599 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-03 14:04:30,517 INFO mch.training: Training model for node: Sarcoma
+2025-11-03 14:04:37,543 INFO mch.training: Training model for node: Solid tumour
+2025-11-03 14:04:44,356 INFO mch.training: Training model for node: Central nervous system
+2025-11-03 14:04:51,849 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-04 00:50:26,098 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 00:50:40,606 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 00:50:45,767 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 00:50:59,175 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 00:50:59,177 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 00:51:26,558 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 00:51:27,395 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 00:51:27,398 INFO mch.training: DM disabled
+2025-11-04 00:51:27,399 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-04 00:51:27,401 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 00:56:13,080 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 162, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 592, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 259, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 573, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 508, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 570, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 592, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 259, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1662, in patched_fit
+    return original(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 573, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 508, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 570, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/ensemble/_forest.py", line 377, in fit
+    estimator._compute_missing_values_in_feature_mask(
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/tree/_classes.py", line 222, in _compute_missing_values_in_feature_mask
+    _assert_all_finite_element_wise(X, xp=np, allow_nan=True, **common_kwargs)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/validation.py", line 172, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains infinity or a value too large for dtype('float32').
+2025-11-04 01:05:52,743 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 01:06:05,885 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 01:06:11,424 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 01:06:23,875 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 01:06:23,890 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 01:06:51,768 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 01:06:52,337 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 01:06:52,339 INFO mch.training: DM disabled
+2025-11-04 01:06:52,341 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 158, in train_all_models
+    ("replace_inf", FunctionTransformer(_replace_inf, validate=False)),
+                    ^^^^^^^^^^^^^^^^^^^
+NameError: name 'FunctionTransformer' is not defined
+2025-11-04 01:11:43,903 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 01:11:57,553 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 01:12:03,092 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 01:12:16,658 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 01:12:16,660 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 01:12:44,173 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 01:12:44,721 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 01:12:44,723 INFO mch.training: DM disabled
+2025-11-04 01:12:44,725 INFO mch.training: Pipeline steps: ['modelGeneration', 'differentialMethylation', 'replace_inf']
+2025-11-04 01:12:44,726 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 01:16:53,156 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 173, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 592, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 259, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 573, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 508, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 570, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 386, in _fit
+    self._validate_steps()
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 256, in _validate_steps
+    raise TypeError(
+TypeError: All intermediate steps should be transformers and implement fit and transform or be the string 'passthrough' 'RandomForestClassifier(max_depth=10, n_estimators=50, n_jobs=1, random_state=42)' (type <class 'sklearn.ensemble._forest.RandomForestClassifier'>) doesn't
+2025-11-04 01:23:10,283 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 01:23:25,092 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 01:23:30,811 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 01:23:44,189 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 01:23:44,192 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 01:24:12,181 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 01:24:12,759 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 01:24:12,761 INFO mch.training: DM enabled
+2025-11-04 01:24:12,763 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 01:24:12,764 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 01:28:26,385 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 173, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 592, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 259, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 573, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 508, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 570, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/preprocessing/_function_transformer.py", line 252, in transform
+    out = self._transform(X, func=self.func, kw_args=self.kw_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/preprocessing/_function_transformer.py", line 379, in _transform
+    return func(X, **(kw_args if kw_args else {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 29, in _replace_inf
+    X = np.asarray(X, dtype=np.float64)
+        ^^
+NameError: name 'np' is not defined
+2025-11-04 01:41:22,902 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-04 01:41:22,904 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 01:41:36,054 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 01:41:36,069 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 01:42:02,901 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 01:42:03,532 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 01:42:03,534 INFO mch.training: DM enabled
+2025-11-04 01:42:03,536 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 01:42:03,537 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 01:47:06,897 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 174, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 592, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 259, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 573, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 508, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 570, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 72, in runDifferentialMethylation
+    X = X.apply(pd.to_numeric, errors='coerce')
+        ^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'apply'
+2025-11-04 01:50:58,026 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-04 01:50:58,028 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 01:51:12,966 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-04 01:51:13,451 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-04 01:51:13,907 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-04 01:51:14,349 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-04 01:51:14,809 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-04 01:51:15,241 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-04 01:51:15,776 INFO mch.training: Prefilter done: kept 200 features
+2025-11-04 01:51:15,801 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 01:51:15,810 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-04 01:51:15,811 INFO mch.training: DM disabled
+2025-11-04 01:51:15,813 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-04 01:51:15,814 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 07:52:28,047 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 07:52:40,427 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 07:52:44,372 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 07:52:55,681 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-04 07:52:56,040 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-04 07:52:56,374 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-04 07:52:56,720 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-04 07:52:57,066 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-04 07:52:57,406 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-04 07:52:57,815 INFO mch.training: Prefilter done: kept 200 features
+2025-11-04 07:52:57,831 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 07:52:57,837 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-04 07:52:57,838 INFO mch.training: DM disabled
+2025-11-04 07:52:57,840 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-04 07:52:57,841 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 07:53:07,930 INFO mch.training: Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-04 07:53:07,937 INFO mch.training: Model trained for Haematological malignancy, not saved
+2025-11-04 07:53:07,938 INFO mch.training: Training model for node: Sarcoma
+2025-11-04 07:53:21,387 INFO mch.training: Prefilter start: input shape=(80,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-04 07:53:21,768 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-04 07:53:22,118 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-04 07:53:22,468 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-04 07:53:22,827 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-04 07:53:23,200 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-04 07:53:23,633 INFO mch.training: Prefilter done: kept 200 features
+2025-11-04 07:53:23,656 WARNING mch.training: Drop rare classes (<2 samples): Liver tumour, Sarcoma
+2025-11-04 07:53:23,661 INFO mch.training: Train/Test shapes: X_train=(63, 200), X_test=(16, 200)
+2025-11-04 07:53:23,661 INFO mch.training: DM disabled
+2025-11-04 07:53:23,663 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-04 07:53:23,664 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 07:53:33,568 INFO mch.training: Test accuracy: 0.2500, macro_f1: 0.1987, weighted_f1: 0.2412
+2025-11-04 07:53:33,574 INFO mch.training: Model trained for Sarcoma, not saved
+2025-11-04 07:53:33,575 INFO mch.training: Training model for node: Solid tumour
+2025-11-04 07:53:47,228 INFO mch.training: Prefilter start: input shape=(48,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-04 07:53:47,665 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-04 07:53:48,069 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-04 07:53:48,552 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-04 07:53:48,963 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-04 07:53:49,380 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-04 07:53:49,848 INFO mch.training: Prefilter done: kept 200 features
+2025-11-04 07:53:49,867 INFO mch.training: Train/Test shapes: X_train=(38, 200), X_test=(10, 200)
+2025-11-04 07:53:49,868 INFO mch.training: DM disabled
+2025-11-04 07:53:49,869 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-04 07:53:49,871 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 07:53:59,879 INFO mch.training: Test accuracy: 0.3000, macro_f1: 0.1429, weighted_f1: 0.2286
+2025-11-04 07:53:59,885 INFO mch.training: Model trained for Solid tumour, not saved
+2025-11-04 07:53:59,886 INFO mch.training: Training model for node: Central nervous system
+2025-11-04 07:54:14,270 INFO mch.training: Prefilter start: input shape=(129,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-04 07:54:14,713 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-04 07:54:15,156 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-04 07:54:15,641 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-04 07:54:16,087 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-04 07:54:16,555 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-04 07:54:17,061 INFO mch.training: Prefilter done: kept 200 features
+2025-11-04 07:54:17,113 WARNING mch.training: Drop rare classes (<2 samples): Germ cell tumour, CNS, Peripheral nerve sheath tumour, CNS
+2025-11-04 07:54:17,119 INFO mch.training: Train/Test shapes: X_train=(101, 200), X_test=(26, 200)
+2025-11-04 07:54:17,121 INFO mch.training: DM disabled
+2025-11-04 07:54:17,122 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-04 07:54:17,124 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 07:54:31,965 INFO mch.training: Test accuracy: 0.1538, macro_f1: 0.0522, weighted_f1: 0.1146
+2025-11-04 07:54:31,971 INFO mch.training: Model trained for Central nervous system, not saved
+2025-11-04 07:54:31,972 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-04 09:23:30,618 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 09:23:40,918 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 09:23:44,368 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 09:23:53,866 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 09:23:53,878 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 09:24:14,446 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 09:24:14,954 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 09:24:14,955 INFO mch.training: DM enabled
+2025-11-04 09:24:14,956 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 09:24:14,958 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 09:24:16,082 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 174, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 472, in safe_patch_function
+    return original(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 72, in runDifferentialMethylation
+    X = X.apply(pd.to_numeric, errors='coerce')
+        ^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'apply'
+2025-11-04 09:26:02,263 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 09:26:12,674 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 09:26:15,744 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 09:26:25,463 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 09:26:25,475 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 09:26:46,053 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 09:26:46,496 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 09:26:46,502 INFO mch.training: DM enabled
+2025-11-04 09:26:46,504 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 09:26:46,505 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 09:26:47,678 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 174, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 472, in safe_patch_function
+    return original(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 72, in runDifferentialMethylation
+    X = X.apply(pd.to_numeric, errors='coerce')
+        ^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'apply'
+2025-11-04 09:43:04,530 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 09:43:15,226 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 09:43:18,215 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 09:43:27,676 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 09:43:27,678 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 09:43:47,976 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 09:43:48,505 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 09:43:48,506 INFO mch.training: DM enabled
+2025-11-04 09:43:48,508 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 09:43:48,508 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 09:43:49,673 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 174, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 472, in safe_patch_function
+    return original(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 72, in runDifferentialMethylation
+    X = X.apply(pd.to_numeric, errors='coerce')
+        ^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'apply'
+2025-11-04 09:52:10,485 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 09:52:20,794 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 09:52:24,096 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 09:52:33,831 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 09:52:33,842 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 09:52:54,577 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 09:52:55,041 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 09:52:55,042 INFO mch.training: DM enabled
+2025-11-04 09:52:55,044 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 09:52:55,045 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 09:52:56,178 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 174, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 472, in safe_patch_function
+    return original(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 72, in runDifferentialMethylation
+    X = X.apply(pd.to_numeric, errors='coerce')
+        ^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'apply'
+2025-11-04 10:02:26,249 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-04 10:02:37,578 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-04 10:02:41,141 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-04 10:02:51,012 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=0, scan_max=5000, chunk_size=1000
+2025-11-04 10:02:51,014 INFO mch.training: Prefilter bypass: kept=600117
+2025-11-04 10:03:11,886 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-04 10:03:12,399 INFO mch.training: Train/Test shapes: X_train=(85, 600117), X_test=(22, 600117)
+2025-11-04 10:03:12,400 INFO mch.training: DM enabled
+2025-11-04 10:03:12,401 INFO mch.training: Pipeline steps: ['replace_inf', 'differentialMethylation', 'modelGeneration']
+2025-11-04 10:03:12,402 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-04 10:03:13,549 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/training.py", line 174, in train_all_models
+    pipeline.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 472, in safe_patch_function
+    return original(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 469, in fit
+    Xt = self._fit(X, y, routed_params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 406, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/memory.py", line 312, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 1310, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 46, in fit
+    results = self.runDifferentialMethylation(X,condition)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/9900-f18a-cake/working_branch/src/mch/models/differentialMethylationClassifier.py", line 72, in runDifferentialMethylation
+    X = X.apply(pd.to_numeric, errors='coerce')
+        ^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'apply'

@@ -1,4 +1,5 @@
-import os, time, math, logging, heapq
+import os, time, math, logging, heapq,sys
+
 from pathlib import Path
 from typing import Dict, Optional
 import polars as pl
@@ -7,7 +8,11 @@ from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearc
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from differentialMethylationClassifier import DifferentialMethylation
+from sklearn.preprocessing import FunctionTransformer
+import numpy as np
+
+sys.path.append("/Workspace/9900-f18a-cake/working_branch/src")
+from mch.models.differentialMethylationClassifier import DifferentialMethylation
 from mch.config.settings import mvalue_df, main_tree, DATA_DIR
 from mch.config.modelTrainingParameters import parameter_grid, resultsDirectory
 
@@ -20,6 +25,13 @@ if not logger.handlers:
     fh.setFormatter(fmt); fh.setLevel(logging.INFO)
     sh = logging.StreamHandler(); sh.setFormatter(fmt); sh.setLevel(logging.INFO)
     logger.addHandler(fh); logger.addHandler(sh)
+
+def _replace_inf(X):
+    X = np.asarray(X, dtype=np.float64)
+    mask = ~np.isfinite(X)  # True for nan/inf/-inf
+    X[mask] = np.nan
+    X = np.clip(X, -3.4e38, 3.4e38)
+    return X
 
 def _prefilter_polars_chunked(df_pl: pl.DataFrame, topk: int, id_col: str = "biosample_id"):
     """
@@ -138,10 +150,15 @@ class BatchModelTrainer:
                     logger.info("DM disabled")
                     pipeline = Pipeline([("modelGeneration", rf)])
                 else:
-                    pipeline = Pipeline([
-                        ("differentialMethylation", DifferentialMethylation()),
-                        ("modelGeneration", rf),
-                    ])
+                    # pipeline = Pipeline([
+                        # ("differentialMethylation", DifferentialMethylation()),
+                        # ("modelGeneration", rf),
+                    # ])
+                    logger.info("DM enabled")
+                    pipeline = Pipeline([("replace_inf", FunctionTransformer(_replace_inf, validate=False)),
+                                         ("differentialMethylation", DifferentialMethylation()),
+                                         ("modelGeneration", rf),
+                                         ])
                 logger.info("Pipeline steps: %s", list(pipeline.named_steps.keys()))
 
                 # set up cross-validation dynamically based on training data

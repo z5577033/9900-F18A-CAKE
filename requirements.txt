@@ -95,7 +95,7 @@ MarkupSafe==3.0.2
 matplotlib==3.9.2
 matplotlib-inline==0.1.7
 mccabe==0.7.0
--e .
+# -e .
 # -e git+ssh://git@bitbucket.org/benccia/methylationclassifier.git@fa1fc1719d01ec77ffcd88d100b1d0998133dc4f#egg=mch
 memoized-property==1.0.3
 methylcheck==0.8.5
@@ -105,7 +105,7 @@ mistune==3.0.2
 mock==5.1.0
 msgpack==1.1.0
 multidict==6.1.0
-mysqlclient==2.2.5
+pymysql==1.1.1
 nbclient==0.10.0
 nbconvert==7.16.4
 nbformat==5.10.4
@@ -159,9 +159,9 @@ requests==2.32.3
 result==0.17.0
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
-rpds-py==0.21.0
-rpy2==3.5.16
-rpy2-arrow==0.1.1
+# rpds-py==0.21.0
+# rpy2==3.5.16
+# rpy2-arrow==0.1.1
 scikit-learn==1.5.2
 scipy==1.14.1
 seaborn==0.13.2
