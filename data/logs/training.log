@@ -1031,3 +1031,97 @@ AttributeError: 'numpy.ndarray' object has no attribute 'apply'
 2025-11-05 14:48:40,392 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
 2025-11-05 14:48:52,539 INFO mch.training: Test accuracy: 0.7273, macro_f1: 0.2807, weighted_f1: 0.7273
 2025-11-05 14:48:52,541 INFO mch.training: Model trained for Haematological malignancy, not saved
+2025-11-06 11:30:46,352 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-06 11:31:04,109 INFO mch.training: Training model for node: Vascular/lymphatic anomalies
+2025-11-06 11:31:10,955 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-06 11:31:26,204 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-06 11:31:26,664 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-06 11:31:27,380 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-06 11:31:27,807 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-06 11:31:28,249 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-06 11:31:28,658 INFO mch.training: Prefilter done: kept 200 features
+2025-11-06 11:31:28,676 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-06 11:31:28,682 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-06 11:31:28,683 INFO mch.training: Using LogisticRegression as model.
+2025-11-06 11:31:28,684 INFO mch.training: DM disabled
+2025-11-06 11:31:28,685 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-06 11:31:28,686 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-06 11:31:28,714 INFO mch.training: Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-06 11:31:28,716 INFO mch.training: Model trained for Haematological malignancy, not saved
+2025-11-06 11:31:28,717 INFO mch.training: Training model for node: Sarcoma
+2025-11-06 11:31:49,487 INFO mch.training: Prefilter start: input shape=(80,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-06 11:31:50,048 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-06 11:31:50,577 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-06 11:31:51,091 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-06 11:31:51,592 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-06 11:31:52,086 INFO mch.training: Prefilter done: kept 200 features
+2025-11-06 11:31:52,119 WARNING mch.training: Drop rare classes (<2 samples): Liver tumour, Sarcoma
+2025-11-06 11:31:52,124 INFO mch.training: Train/Test shapes: X_train=(63, 200), X_test=(16, 200)
+2025-11-06 11:31:52,126 INFO mch.training: Using LogisticRegression as model.
+2025-11-06 11:31:52,127 INFO mch.training: DM disabled
+2025-11-06 11:31:52,128 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-06 11:31:52,129 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-06 11:31:52,158 INFO mch.training: Test accuracy: 0.1250, macro_f1: 0.0778, weighted_f1: 0.1111
+2025-11-06 11:31:52,159 INFO mch.training: Model trained for Sarcoma, not saved
+2025-11-06 11:31:52,161 INFO mch.training: Training model for node: Solid tumour
+2025-11-06 11:32:12,833 INFO mch.training: Prefilter start: input shape=(48,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-06 11:32:13,320 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-06 11:32:13,770 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-06 11:32:14,236 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-06 11:32:14,672 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-06 11:32:15,094 INFO mch.training: Prefilter done: kept 200 features
+2025-11-06 11:32:15,123 INFO mch.training: Train/Test shapes: X_train=(38, 200), X_test=(10, 200)
+2025-11-06 11:32:15,124 INFO mch.training: Using LogisticRegression as model.
+2025-11-06 11:32:15,125 INFO mch.training: DM disabled
+2025-11-06 11:32:15,126 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-06 11:32:15,127 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-06 11:32:15,153 INFO mch.training: Test accuracy: 0.1000, macro_f1: 0.0408, weighted_f1: 0.0571
+2025-11-06 11:32:15,154 INFO mch.training: Model trained for Solid tumour, not saved
+2025-11-06 11:32:15,155 INFO mch.training: Training model for node: Central nervous system
+2025-11-06 11:32:36,184 INFO mch.training: Prefilter start: input shape=(129,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-06 11:32:36,728 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-06 11:32:37,204 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-06 11:32:37,726 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-06 11:32:38,210 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-06 11:32:38,671 INFO mch.training: Prefilter done: kept 200 features
+2025-11-06 11:32:38,729 WARNING mch.training: Drop rare classes (<2 samples): Germ cell tumour, CNS, Peripheral nerve sheath tumour, CNS
+2025-11-06 11:32:38,734 INFO mch.training: Train/Test shapes: X_train=(101, 200), X_test=(26, 200)
+2025-11-06 11:32:38,736 INFO mch.training: Using LogisticRegression as model.
+2025-11-06 11:32:38,737 INFO mch.training: DM disabled
+2025-11-06 11:32:38,738 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-06 11:32:38,738 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-06 11:32:38,798 INFO mch.training: Test accuracy: 0.1923, macro_f1: 0.0782, weighted_f1: 0.1774
+2025-11-06 11:32:38,800 INFO mch.training: Model trained for Central nervous system, not saved
+2025-11-06 11:32:38,801 INFO mch.training: Training model for node: Overgrowth syndrome
+2025-11-06 11:56:58,059 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-06 11:56:58,061 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-06 11:57:14,556 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-06 11:57:15,062 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-06 11:57:15,492 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-06 11:57:15,906 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-06 11:57:16,338 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-06 11:57:16,766 INFO mch.training: Prefilter done: kept 200 features
+2025-11-06 11:57:16,778 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-06 11:57:16,783 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-06 11:57:16,785 INFO mch.training: Using LogisticRegression as model.
+2025-11-06 11:57:16,785 INFO mch.training: DM disabled
+2025-11-06 11:57:16,786 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-06 11:57:16,787 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-06 11:57:16,823 INFO mch.training: Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-06 11:57:16,825 INFO mch.training: Model trained for Haematological malignancy, not saved
+2025-11-06 11:59:25,502 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-06 11:59:25,504 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-06 11:59:41,359 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-06 11:59:41,828 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-06 11:59:42,246 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-06 11:59:42,974 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-06 11:59:43,400 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-06 11:59:43,815 INFO mch.training: Prefilter done: kept 200 features
+2025-11-06 11:59:43,836 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-06 11:59:43,843 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-06 11:59:43,844 INFO mch.training: Using LogisticRegression as model.
+2025-11-06 11:59:43,845 INFO mch.training: DM disabled
+2025-11-06 11:59:43,846 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-06 11:59:43,847 WARNING mch.training: parameter_grid is None/empty, fit pipeline without grid search
+2025-11-06 11:59:43,877 INFO mch.training: Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-06 11:59:43,878 INFO mch.training: Model trained for Haematological malignancy, not saved
