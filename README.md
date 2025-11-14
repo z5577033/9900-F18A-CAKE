@@ -11,11 +11,11 @@ The corresponding Databricks workspace directory is:
 /Workspace/9900-F18A-CAKE/working_branch
 
 ## Running instruction
-how to run: 
+### how to run: 
 
-python /app/src/mch/models/run_training.py 
+python /Workspace/9900-F18A-CAKE/src/mch/models/run_training.py 
 
---raise-on-error                                                                         "don't jump out when some node have error"
+--raise-on-error                                                                         "don't jump out when some node not trainable. e.g. less than 10 samples include"
 
 --disable-dm                                                                             "if something wrong with R enviroment or memory is not adequate (less than 64 GB with 20GB dataset)"
 
@@ -24,3 +24,10 @@ python /app/src/mch/models/run_training.py
 --prefilter-topk 50 --prefilter-scan-max 3000 --prefilter-chunk-size 500                 "if dm was disabled, then using this to do the feature filter"
 
 Or, it may can run in /app/src/mch/models/Training_model.ipynb
+
+### working directory
+
+to change the working directory, go /Workspace/9900-F18A-CAKE/src/mch/configs/setting.py
+
+or modify /Workspace/9900-F18A-CAKE/src/mch/configs/base_config.yaml
+
