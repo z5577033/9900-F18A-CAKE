@@ -39,3 +39,7 @@ Deployment instructions
 
 ##Who do I talk to?
 Ben
+
+##Branch info
+This is the origin code repo from client, which maintain the basic stucture of model and data pre-proccess. While it have multiple error. For minimum runable version, see branch z5498190
+
