@@ -5,3 +5,7 @@ It resolves conflicts, fixes broken paths/imports, adds missing resources, and i
 ## Branch info
 The full workflow was running on databricks, don't commit any changes on this branch (or other branch) since all modify should be done on databricks and be automaticly updated to github.
 To change work directory, go src/mch/config/setting.py
+
+The corresponding Databricks workspace directory is:
+
+/Workspace/9900-F18A-CAKE/working_branch
