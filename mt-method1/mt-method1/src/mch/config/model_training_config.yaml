@@ -1,0 +1,60 @@
+dataDirectory: "/media/storage/bcurran/classifiers/methylation/data/"
+resultsDirectory: "/media/storage/bcurran/classifiers/methylation/results/models/"
+datafile: "/media/storage/bcurran/classifiers/methylation/data/methylationHG38FilteredMValue.h5ad"
+# filteredDataFile: /data/projects/classifiers/methylation/data/baseMethylationBetaValuesFiltered.parquet
+filteredMValueFile: "/media/storage/bcurran/classifiers/methylation/data/methylationMValuesFiltered.parquet"
+
+# 可选：默认跑哪一个模型
+default_model_type: "xgboost"   # 可选: svm | random_forest | xgboost
+
+grid_search_config:
+  scoring: "f1_macro"   # 原来是 accuracy，建议改为 macro F1 适配不均衡
+  n_splits: 3
+  n_jobs: 10
+  verbose: 2
+  error_score: "raise"
+
+model_configs:
+  svm:
+    parameters:
+      decision_function_shape: "ovo"
+      probability: true
+      random_state: 42
+      cache_size: 500
+      class_weight: "balanced"
+    parameter_grid:
+      modelGeneration__C: [0.1, 1, 10]
+      modelGeneration__kernel: ["linear", "rbf"]
+      modelGeneration__gamma: ["scale", "auto"]
+
+  random_forest:
+    parameters:
+      random_state: 42
+      n_jobs: -1
+      class_weight: "balanced_subsample"
+    parameter_grid:
+      modelGeneration__n_estimators: [300, 600, 1000]
+      modelGeneration__max_depth: [null, 10, 20]
+      modelGeneration__criterion: ["gini", "entropy"]
+      modelGeneration__max_features: [null, "sqrt", "log2"]
+      modelGeneration__min_samples_split: [2, 5, 10]
+      modelGeneration__min_samples_leaf: [1, 2, 4]
+
+  xgboost:
+    parameters:
+      n_estimators: 300
+      max_depth: 6
+      learning_rate: 0.1
+      subsample: 0.8
+      colsample_bytree: 0.8
+      objective: "multi:softprob"
+      random_state: 42
+      n_jobs: -1
+      tree_method: "hist"   # 有 GPU 可改 "gpu_hist"
+      # eval_metric: "mlogloss"  # 如需固定评估指标可打开
+    parameter_grid:
+      modelGeneration__n_estimators: [200, 300, 500]
+      modelGeneration__max_depth: [4, 6, 8]
+      modelGeneration__learning_rate: [0.05, 0.1, 0.2]
+      modelGeneration__subsample: [0.7, 0.8, 1.0]
+      modelGeneration__colsample_bytree: [0.7, 0.8, 1.0]
