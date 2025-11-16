@@ -5,18 +5,13 @@ from typing import Dict, Optional
 import polars as pl
 import pandas as pd
 from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
-
-# --- MODIFIED 1 of 3: Import Statement ---
-# from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression # Changed the import
-# --- End Modification ---
-
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.preprocessing import FunctionTransformer
 import numpy as np
 
-sys.path.append("/Workspace/9900-f18a-cake/working_branch/src")
+sys.path.append("/Workspace/9900-f18a-cake/mt-method2/src")
 from mch.models.differentialMethylationClassifier import DifferentialMethylation
 from mch.config.settings import mvalue_df, main_tree, DATA_DIR
 from mch.config.modelTrainingParameters import parameter_grid, resultsDirectory
@@ -85,7 +80,7 @@ class BatchModelTrainer:
 
     def __init__(self, tree=main_tree):
         self.tree = tree
-        self.models: Dict[str, LogisticRegression] = {} # --- MODIFIED: Changed type hint ---
+        self.models: Dict[str, RandomForestClassifier] = {}
         self.training_stats: Dict[str, Dict] = {}
         self.dataDirectory = DATA_DIR
         self.resultsDirectory = resultsDirectory
@@ -96,8 +91,6 @@ class BatchModelTrainer:
         self.cv_n_jobs = int(os.getenv("CV_N_JOBS", "1"))
         self.prefilter_topk = int(os.getenv("MCH_PREFILTER_TOPK", "200"))
         self.only_node = os.getenv("MCH_ONLY_NODE")
-        # NOTE: These rf_params are now unused, but we leave them
-        # to avoid breaking anything else that might read them.
         self.rf_params = {
             "n_estimators": int(os.getenv("RF_N_ESTIMATORS", "50")),
             "max_depth": int(os.getenv("RF_MAX_DEPTH", "10")),
@@ -146,31 +139,26 @@ class BatchModelTrainer:
                 )
                 logger.info("Train/Test shapes: X_train=%s, X_test=%s", X_train.shape, X_test.shape)
 
-                # --- MODIFIED 2 of 3: Model Instantiation ---
-                # This is where we replace the model.
-                logger.info("Using LogisticRegression as model.")
-                model = LogisticRegression(
-                    random_state=42,
-                    solver='liblinear',  # A good default solver for this type of data
-                    max_iter=1000,       # Increased for convergence
-                    n_jobs=self.rf_n_jobs # We can still use the n_jobs parameter
-                )
-                # --- End Modification ---
-
-
                 # build pipeline with/without DM step
+                rf = RandomForestClassifier(
+                    random_state=42,
+                    n_jobs=self.rf_n_jobs,
+                    n_estimators=self.rf_params["n_estimators"],
+                    max_depth=self.rf_params["max_depth"],
+                )
                 if self.disable_dm:
                     logger.info("DM disabled")
-                    # --- MODIFIED 3 of 3: Pipeline Definition ---
-                    pipeline = Pipeline([("modelGeneration", model)]) # Changed 'rf' to 'model'
+                    pipeline = Pipeline([("modelGeneration", rf)])
                 else:
+                    # pipeline = Pipeline([
+                        # ("differentialMethylation", DifferentialMethylation()),
+                        # ("modelGeneration", rf),
+                    # ])
                     logger.info("DM enabled")
                     pipeline = Pipeline([("replace_inf", FunctionTransformer(_replace_inf, validate=False)),
                                          ("differentialMethylation", DifferentialMethylation()),
-                                         ("modelGeneration", model), # Changed 'rf' to 'model'
+                                         ("modelGeneration", rf),
                                          ])
-                # --- End Modification ---
-                
                 logger.info("Pipeline steps: %s", list(pipeline.named_steps.keys()))
 
                 # set up cross-validation dynamically based on training data
@@ -185,6 +173,7 @@ class BatchModelTrainer:
                     logger.warning("parameter_grid is None/empty, fit pipeline without grid search")
                     pipeline.fit(X_train, y_train)
                     self.models[node] = pipeline
+                    estimator = pipeline
 
                     # assess and collect stats
                     metrics = {}
@@ -199,24 +188,22 @@ class BatchModelTrainer:
                         }
                         logger.info("Test accuracy: %.4f, macro_f1: %.4f, weighted_f1: %.4f",
                                     metrics["accuracy"], metrics["macro_f1"], metrics["weighted_f1"])
-                    # top 10 features by importance
+
+                    # (optional) simple “top_features” block; keep as-is if you like
                     top_features = None
                     try:
-                        # For Logistic Regression, we look at 'coef_' not 'feature_importances_'
-                        # This gets complex for multi-class, so we'll simplify
-                        # or skip it for this comparison.
                         if hasattr(pipeline.named_steps["modelGeneration"], "feature_importances_"):
                             importances = pipeline.named_steps["modelGeneration"].feature_importances_
                             idx = np.argsort(importances)[::-1][:10]
                             top_features = [{"feature": kept_cols[i], "importance": float(importances[i])} for i in idx]
                         elif hasattr(pipeline.named_steps["modelGeneration"], "coef_"):
-                            # Simple case for binary or (1 vs all) coefs
                             importances = np.abs(pipeline.named_steps["modelGeneration"].coef_[0])
                             idx = np.argsort(importances)[::-1][:10]
                             top_features = [{"feature": kept_cols[i], "importance": float(importances[i])} for i in idx]
                     except Exception:
-                        top_features = None # Skipping feature importance for safety
+                        top_features = None
 
+                    # >>> Single, final write that **includes** the estimator <<<
                     self.training_stats[node] = {
                         "n_samples_total": int(len(y_all)),
                         "n_samples_train": int(len(y_train)),
@@ -225,6 +212,7 @@ class BatchModelTrainer:
                         "classes": sorted(map(str, y_all.unique())),
                         "metrics": metrics,
                         "top_features": top_features,
+                        "estimator": estimator,   
                     }
                 else:
                     search = GridSearchCV(
@@ -238,6 +226,7 @@ class BatchModelTrainer:
                     )
                     search.fit(X_train, y_train)
                     self.models[node] = search.best_estimator_
+                    best_est = search.best_estimator_ 
 
                     # assess and collect stats (after GridSearch)
                     metrics = {}
@@ -254,17 +243,12 @@ class BatchModelTrainer:
                                     metrics["accuracy"], metrics["macro_f1"], metrics["weighted_f1"])
                     top_features = None
                     try:
-                        if hasattr(self.models[node].named_steps["modelGeneration"], "feature_importances_"):
-                            importances = self.models[node].named_steps["modelGeneration"].feature_importances_
-                            idx = np.argsort(importances)[::-1][:10]
-                            top_features = [{"feature": kept_cols[i], "importance": float(importances[i])} for i in idx]
-                        elif hasattr(self.models[node].named_steps["modelGeneration"], "coef_"):
-                            importances = np.abs(self.models[node].named_steps["modelGeneration"].coef_[0])
-                            idx = np.argsort(importances)[::-1][:10]
-                            top_features = [{"feature": kept_cols[i], "importance": float(importances[i])} for i in idx]
+                        import numpy as np
+                        importances = self.models[node].named_steps["modelGeneration"].feature_importances_
+                        idx = np.argsort(importances)[::-1][:10]
+                        top_features = [{"feature": kept_cols[i], "importance": float(importances[i])} for i in idx]
                     except Exception:
                         top_features = None
-                        
                     self.training_stats[node] = {
                         "n_samples_total": int(len(y_all)),
                         "n_samples_train": int(len(y_train)),
@@ -274,12 +258,13 @@ class BatchModelTrainer:
                         "metrics": metrics,
                         "top_features": top_features,
                         "best_params": getattr(search, "best_params_", None),
+                        "estimator": best_est,
                     }
 
                 if save_dir:
                     logger.info("Model trained for %s, save_dir=%s", node, save_dir)
                 else:
-                    logger.info("Model trained for %s, not saved", node)
+                    logger.info("Model trained for %s; saved via MLflow if estimator present.", node)
 
             except Exception:
                 logger.exception("Error training model for %s", node)
@@ -389,7 +374,7 @@ class BatchModelTrainer:
         return filteredData, design
             # Implementation from your existing code
     
-    def _save_model(self, node: str, model: LogisticRegression, save_dir: Path): # --- MODIFIED: Changed type hint ---
+    def _save_model(self, node: str, model: RandomForestClassifier, save_dir: Path):
         """Save a single model to disk."""
         model_path = save_dir / f"{node}_model.joblib"
         joblib.dump(model, model_path)

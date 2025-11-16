@@ -18,21 +18,21 @@ model_configs:
       random_state: 42
       cache_size: 500
     parameter_grid:
-      modelRefinement__C: [0.1, 1, 10]
-      modelRefinement__kernel: ['linear', 'rbf']
-      modelRefinement__gamma: ['scale', 'auto']
+      modelGeneration__C: [0.1, 1, 10]
+      modelGeneration__kernel: ['linear', 'rbf']
+      modelGeneration__gamma: ['scale', 'auto']
 
   random_forest:
     parameters:
       random_state: 42
       n_jobs: -1
     parameter_grid:
-      modelRefinement__n_estimators: [100, 200, 300]
-      modelRefinement__max_depth: [null, 10, 20]
-      modelRefinement__criterion: ['gini', 'entropy']
-      modelRefinement__max_features: [null, 'sqrt', 'log2']
-      modelRefinement__min_samples_split: [2, 5, 10]
-      modelRefinement__class_weight: [null, 'balanced']
+      modelGeneration__n_estimators: [100, 200, 300]
+      modelGeneration__max_depth: [null, 10, 20]
+      modelGeneration__criterion: ['gini', 'entropy']
+      modelGeneration__max_features: [null, 'sqrt', 'log2']
+      modelGeneration__min_samples_split: [2, 5, 10]
+      modelGeneration__class_weight: [null, 'balanced']
 
   #modelRefinement__kernel:
   #  - linear

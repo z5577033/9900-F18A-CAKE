@@ -1,59 +1,61 @@
 suppressMessages({
-    #library("reticulate",  quiet = TRUE)
-    #library("anndata",  quiet = TRUE)
-    library("limma", quiet = TRUE)
-    library("arrow", quiet = TRUE)
+  library("limma", quiet = TRUE)
+  library("arrow", quiet = TRUE)
 })
 
+runDM <- function(dataFile, designFile) {
+  data <- read_feather(dataFile)
+  designdf <- read_feather(designFile)
 
-#path <- .libPaths()
-#path = c(path, "/data/projects/classifiers/bin/R-packages")
+  # Coerce to data.frame
+  data <- as.data.frame(data, stringsAsFactors = FALSE)
+  designdf <- as.data.frame(designdf, stringsAsFactors = FALSE)
 
-runDMC <- function(data){
-    data <- as.data.frame(data)
-    #print(data)
-    data <- arrow_table(data)
-    return (data)
-}
+  # Expect sampleId and cancerType columns
+  if (!("sampleId" %in% names(designdf))) {
+    stop("designFile must contain 'sampleId'")
+  }
+  if (!("cancerType" %in% names(designdf))) {
+    stop("designFile must contain 'cancerType'")
+  }
 
-runDM <- function(dataFile, designFile){
-    data = read_feather(dataFile)
-    designdf = read_feather(designFile)
-    
+  # Remove helper/name columns from data, keep features + sampleId
+  if (!("sampleId" %in% names(data))) {
+    stop("dataFile must contain 'sampleId'")
+  }
+  feature_cols <- setdiff(names(data), c("sampleId", "Name"))
+  # data rows = samples, columns = features; index by sampleId
+  rownames(data) <- as.character(data[["sampleId"]])
+  data <- data[, feature_cols, drop = FALSE]
 
-    designdf <- as.data.frame(designdf)
-    rownames(designdf) <- designdf$sampleId
+  # Coerce to numeric, robustly (limma expects numeric matrix)
+  data[] <- lapply(data, function(x) suppressWarnings(as.numeric(x)))
 
-    data <- as.data.frame(data)
-    rownames(data) <- data[["sampleId"]]
-    data <- data[, !names(data) %in% c("sampleId", "Name"), drop = FALSE]
+  # Align design rows to data columns after transpose
+  # After transpose, columns will be sampleIds
+  # So we build a common set, then order design to match colnames(data_t)
+  common_ids <- intersect(rownames(data), designdf$sampleId)
+  if (length(common_ids) < 2) {
+    stop("Not enough overlapping samples between data and design")
+  }
+  data <- data[common_ids, , drop = FALSE]
+  designdf <- designdf[match(common_ids, designdf$sampleId), , drop = FALSE]
 
-    non_numeric_columns <- sapply(data, function(x) !all(is.numeric(x)))
-    problematic_columns <- names(data)[non_numeric_columns]
-    #print(problematic_columns)
+  # Transpose: rows = probes, cols = samples
+  data_t <- t(as.matrix(data))
 
-    data=t(data)
-    #print(dim(data))
-    #print(dim(designdf))
+  # Group labels (length must equal ncol(data_t))
+  group <- factor(designdf$cancerType)
 
-    data <- as.data.frame(data, stringsAsFactors = FALSE)
-    data[] <- lapply(data, as.numeric)
-    
+  # Design matrix
+  design <- model.matrix(~ group)
 
-    #print(head(data))
-    #data <- t(subSampleAdata$X)
-    targets <- designdf$sample_id
+  fit <- lmFit(data_t, design)
+  fit <- eBayes(fit, robust = TRUE)
 
-    #print(designdf$cancerType)
-    group <- factor(na.omit(designdf$cancerType))
-    
-    design <- model.matrix(~group)
+  # coef 2 corresponds to the group effect in ~ group
+  top <- topTable(fit, coef = 2, number = 50)
 
-    fit.reduced <- lmFit(data, design)
-    fit.reduced <- eBayes(fit.reduced, robust = TRUE)
-    
-    top <- topTable(fit.reduced, coef = 2, number = 50)
-    
-    return(top)
-
+  # Return a data.frame with rownames as probe IDs (limma puts probe IDs as rownames)
+  top
 }
