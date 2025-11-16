@@ -1,0 +1,7 @@
+mt-method2/data/freeze0525/*.csv filter=lfs diff=lfs merge=lfs -text
+data/*.csv filter=lfs diff=lfs merge=lfs -text
+\# filter=lfs diff=lfs merge=lfs -text
+跟踪 filter=lfs diff=lfs merge=lfs -text
+data filter=lfs diff=lfs merge=lfs -text
+檔案夾中的 filter=lfs diff=lfs merge=lfs -text
+csv filter=lfs diff=lfs merge=lfs -text
