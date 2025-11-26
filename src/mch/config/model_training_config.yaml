@@ -3,7 +3,7 @@ resultsDirectory: "/media/storage/bcurran/classifiers/methylation/results/models
 datafile: "/media/storage/bcurran/classifiers/methylation/data/methylationHG38FilteredMValue.h5ad"
 #filteredDataFile: /data/projects/classifiers/methylation/data/baseMethylationBetaValuesFiltered.parquet
 filteredMValueFile: /media/storage/bcurran/classifiers/methylation/data/methylationMValuesFiltered.parquet
-
+default_model_type: "random_forest"
 grid_search_config:
   scoring: 'accuracy'
   n_splits: 3

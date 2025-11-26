@@ -221,7 +221,7 @@ def run_grid_search(
             param_grid=param_grid,
             scoring=scoring,
             cv=cv,
-            verbose=verbose,
+            verbose=2, # 0
             n_jobs=n_jobs,
             error_score=error_score,
         )

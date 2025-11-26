@@ -4298,3 +4298,739 @@ ValueError: could not convert string to float: '2EQDQ4XT_T_LAEHLQTT_M'
 2025-11-16 17:41:19,813 INFO mch.training: Only training specified node: Hepatoblastoma
 2025-11-16 17:41:20,153 INFO mch.training: Only training specified node: Pituitary adenoma
 2025-11-16 17:41:20,620 INFO mch.training: Only training specified node: Angiosarcoma
+2025-11-16 17:45:31,897 INFO mch.training: Only training specified node: Pleomorphic xanthoastrocytoma WHO G2
+2025-11-16 17:45:32,390 INFO mch.training: Only training specified node: Carcinoid
+2025-11-16 17:45:32,516 INFO mch.training: Only training specified node: DICER1-associated anaplastic sarcoma of kidney
+2025-11-16 17:45:32,698 INFO mch.training: Only training specified node: Osteosarcoma
+2025-11-16 17:45:34,483 INFO mch.training: Only training specified node: Spindle cell rhabdomyosarcoma
+2025-11-16 17:45:34,854 INFO mch.training: Only training specified node: Congenital haemangioma
+2025-11-16 17:45:45,240 INFO mch.training: Only training specified node: Mixed germ cell tumour, CNS
+2025-11-16 17:45:45,346 INFO mch.training: Only training specified node: Spinal ependymoma, non-MYCN-amplified, WHO G2
+2025-11-16 17:45:48,123 INFO mch.training: Only training specified node: Liposarcoma
+2025-11-16 17:45:48,159 INFO mch.training: Only training specified node: T-lymphoblastic lymphoma
+2025-11-16 17:51:06,126 INFO mch.training: Only training specified node: Cholangiocarcinoma
+2025-11-16 17:51:06,180 INFO mch.training: Only training specified node: Neuroblastoma
+2025-11-16 17:51:06,182 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-16 17:51:06,263 INFO mch.training: Only training specified node: Malignant undifferentiated tumour
+2025-11-16 17:51:06,368 INFO mch.training: Only training specified node: Primary mediastinal large B cell lymphoma
+2025-11-16 17:51:06,430 INFO mch.training: Only training specified node: Parathyroid adenoma
+2025-11-16 17:51:06,532 INFO mch.training: Only training specified node: Rhabdoid tumour of small cell type
+2025-11-16 17:51:21,463 INFO mch.training: Only training specified node: Burkitt lymphoma
+2025-11-16 17:51:22,335 INFO mch.training: Only training specified node: Myofibroma
+2025-11-16 17:51:22,370 INFO mch.training: Only training specified node: Posterior fossa A ependymoma, group PFA, WHO G2
+2025-11-16 17:51:22,386 INFO mch.training: Only training specified node: Diffuse astrocytoma, MYB or MYBL1-altered
+2025-11-16 17:55:43,255 INFO mch.training: Only training specified node: Atypical teratoid rhabdoid tumour
+2025-11-16 17:55:43,283 INFO mch.training: Only training specified node: Synovial sarcoma
+2025-11-16 17:55:43,283 INFO mch.training: Only training specified node: Pleomorphic rhabdomyosarcoma
+2025-11-16 17:55:43,416 INFO mch.training: Only training specified node: Embryonal tumour with multilayered rosettes, C19MC-altered
+2025-11-16 17:55:43,592 INFO mch.training: Only training specified node: Papillary glioneuronal tumour
+2025-11-16 17:55:43,717 INFO mch.training: Only training specified node: Serotonin-producing pancreatic neuroendocrine tumour
+2025-11-16 17:55:59,075 INFO mch.training: Only training specified node: Supratentorial ependymoma, ZFTA fusion-positive, WHO G3
+2025-11-16 17:55:59,752 INFO mch.training: Only training specified node: Pineoblastoma, NOS
+2025-11-16 17:56:00,142 INFO mch.training: Only training specified node: Inflammatory myofibroblastic tumour
+2025-11-16 17:56:00,229 INFO mch.training: Only training specified node: Sarcoma with YWHAE::NUTM2B fusion
+2025-11-16 18:00:59,163 INFO mch.training: Only training specified node: Posterior fossa A ependymoma, group PFA, WHO Grade unknown
+2025-11-16 18:00:59,225 INFO mch.training: Only training specified node: Choroid plexus papilloma
+2025-11-16 18:00:59,293 INFO mch.training: Only training specified node: Diffuse midline glioma, H3 K27-altered, no H3 K27M mutation
+2025-11-16 18:00:59,330 INFO mch.training: Only training specified node: Choroid plexus carcinoma, TP53-mutant
+2025-11-16 18:01:05,009 INFO mch.training: Only training specified node: Malignant rhabdoid tumour, renal
+2025-11-16 18:01:05,036 INFO mch.training: Only training specified node: Primitive neuroectodermal tumour
+2025-11-16 18:01:05,742 INFO mch.training: Only training specified node: NTRK-rearranged spindle cell neoplasm
+2025-11-16 18:01:09,093 INFO mch.training: Only training specified node: Solid pseudopapillary neoplasm of pancreas
+2025-11-16 18:01:10,000 INFO mch.training: Only training specified node: Medulloblastoma, WNT-activated
+2025-11-16 18:01:13,391 INFO mch.training: Only training specified node: Myofibromatosis
+2025-11-16 18:02:40,793 INFO mch.training: Only training specified node: Anaplastic large cell lymphoma, ALK fusion-positive
+2025-11-16 18:02:42,734 INFO mch.training: Only training specified node: Alveolar rhabdomyosarcoma
+2025-11-16 18:02:43,123 INFO mch.training: Only training specified node: Meningioma WHO G2
+2025-11-16 18:02:43,217 INFO mch.training: Only training specified node: Medulloepithelioma
+2025-11-16 18:02:43,668 INFO mch.training: Only training specified node: High-grade astrocytoma with piloid features
+2025-11-16 18:02:43,669 INFO mch.training: Only training specified node: Fibrous dysplasia
+2025-11-16 18:02:43,835 INFO mch.training: Only training specified node: Giant cell rich tumour, HMGA2-NCOR2 fusion positive
+2025-11-16 18:10:28,192 INFO mch.training: Only training specified node: CIC-rearranged sarcoma, non-CNS
+2025-11-16 18:10:31,534 INFO mch.training: Only training specified node: Malignant peripheral nerve sheath tumour
+2025-11-16 18:10:32,013 INFO mch.training: Only training specified node: Olfactory neuroblastoma
+2025-11-16 18:10:32,216 INFO mch.training: Only training specified node: T cell lymphoproliferative disorder
+2025-11-16 18:10:32,257 INFO mch.training: Only training specified node: Medullary thyroid carcinoma
+2025-11-16 18:10:32,509 INFO mch.training: Only training specified node: Malignant peripheral nerve sheath tumour
+2025-11-16 18:10:33,058 INFO mch.training: Only training specified node: Colorectal carcinoma
+2025-11-16 18:10:33,210 INFO mch.training: Only training specified node: CIC-rearranged sarcoma, non-CNS
+2025-11-16 18:10:33,215 INFO mch.training: Only training specified node: Adrenocortical carcinoma
+2025-11-16 18:10:33,385 INFO mch.training: Only training specified node: Colorectal carcinoma
+2025-11-16 18:10:33,474 INFO mch.training: Only training specified node: Malignant rhabdoid tumour, liver
+2025-11-16 18:10:33,517 INFO mch.training: Only training specified node: Astrocytoma, IDH-mutant WHO G3
+2025-11-16 18:10:33,549 INFO mch.training: Only training specified node: Medullary thyroid carcinoma
+2025-11-16 18:10:33,650 INFO mch.training: Only training specified node: Olfactory neuroblastoma
+2025-11-16 18:10:33,650 INFO mch.training: Only training specified node: Medulloblastoma, SHH-activated and TP53-wildtype
+2025-11-16 18:15:45,221 INFO mch.training: Only training specified node: Pineal parenchymal tumour of intermediate differentiation, WHO G3
+2025-11-16 18:15:45,245 INFO mch.training: Only training specified node: Embryonal rhabdomyosarcoma
+2025-11-16 18:15:45,308 INFO mch.training: Only training specified node: Clear cell sarcoma of kidney
+2025-11-16 18:15:45,308 INFO mch.training: Only training specified node: Renal cell carcinoma
+2025-11-16 18:15:47,096 INFO mch.training: Only training specified node: CNS embryonal tumour with PLAG-family alteration
+2025-11-16 18:15:50,246 INFO mch.training: Only training specified node: EBV-associated smooth muscle tumour
+2025-11-16 18:15:53,755 INFO mch.training: Only training specified node: Hepatosplenic T-cell lymphoma
+2025-11-16 18:15:57,458 INFO mch.training: Only training specified node: Posterior fossa A ependymoma, group PFA, WHO G3
+2025-11-16 18:16:00,587 INFO mch.training: Only training specified node: PIK3CA-related overgrowth tumour
+2025-11-16 18:16:00,690 INFO mch.training: Only training specified node: Gastrointestinal stromal tumour
+2025-11-16 18:16:09,709 INFO mch.training: Only training specified node: DICER1-associated sarcoma
+2025-11-16 18:16:09,860 INFO mch.training: Only training specified node: Acute myeloid leukaemia
+2025-11-16 18:16:22,958 INFO mch.training: Only training specified node: Atypical choroid plexus papilloma
+2025-11-16 18:16:23,270 INFO mch.training: Only training specified node: Desmoid fibromatosis
+2025-11-16 18:16:23,482 INFO mch.training: Only training specified node: BCOR-rearranged sarcoma
+2025-11-16 18:16:23,982 INFO mch.training: Only training specified node: Malignant rhabdoid tumour, non-renal/hepatic
+2025-11-16 18:16:24,013 INFO mch.training: Only training specified node: Neuro-epithelial tumour with PATZ1 fusion
+2025-11-16 18:16:36,209 INFO mch.training: Only training specified node: Germinoma, CNS
+2025-11-16 18:16:36,290 INFO mch.training: Only training specified node: Hepatocellular malignant neoplasm, NOS
+2025-11-16 18:16:36,385 INFO mch.training: Only training specified node: Juvenile myelomonocytic leukaemia
+2025-11-16 18:16:43,437 INFO mch.training: Only training specified node: Olfactory neuroblastoma
+2025-11-16 18:16:43,704 INFO mch.training: Only training specified node: CIC-rearranged sarcoma, non-CNS
+2025-11-16 18:16:43,723 INFO mch.training: Only training specified node: Colorectal carcinoma
+2025-11-16 18:16:43,734 INFO mch.training: Only training specified node: Medullary thyroid carcinoma
+2025-11-16 18:16:43,846 INFO mch.training: Only training specified node: Malignant peripheral nerve sheath tumour
+2025-11-16 18:16:44,401 INFO mch.training: Only training specified node: CNS sarcoma, NOS
+2025-11-16 18:16:44,465 INFO mch.training: Only training specified node: Oligodendroglioma, IDH-mutant and 1p/19q-codeleted, WHO G2
+2025-11-16 18:16:52,980 INFO mch.training: Only training specified node: Lipoblastoma
+2025-11-16 18:16:54,409 INFO mch.training: Only training specified node: Parotid secretory carcinoma
+2025-11-16 18:16:54,745 INFO mch.training: Only training specified node: Ewing sarcoma, bone or soft tissue
+2025-11-16 18:16:54,799 INFO mch.training: Only training specified node: Rosette-forming glioneuronal tumour
+2025-11-16 18:16:55,023 INFO mch.training: Only training specified node: Astrocytoma, NOS WHO G2
+2025-11-16 18:17:01,899 INFO mch.training: Only training specified node: Epidermal naevus
+2025-11-16 18:17:02,149 INFO mch.training: Only training specified node: Desmoplastic small round cell tumour
+2025-11-16 18:17:11,008 INFO mch.training: Only training specified node: Low grade fibromyxoid sarcoma
+2025-11-16 18:17:12,213 INFO mch.training: Only training specified node: Therapy-related myelodysplastic syndrome
+2025-11-16 18:17:12,332 INFO mch.training: Only training specified node: Acute promyelocytic leukaemia
+2025-11-16 18:17:22,171 INFO mch.training: Only training specified node: Malignant melanoma
+2025-11-16 18:17:23,188 INFO mch.training: Only training specified node: Mixed phenotype acute leukaemia
+2025-11-16 18:17:23,347 INFO mch.training: Only training specified node: Lipoblastoma-like tumour of the vulva
+2025-11-16 18:17:23,830 INFO mch.training: Only training specified node: Diffuse large B cell lymphoma
+2025-11-16 18:17:23,846 INFO mch.training: Only training specified node: Cutaneous non-LCH (C group)
+2025-11-16 18:17:31,538 INFO mch.training: Only training specified node: Spindle cell neoplasm
+2025-11-16 18:17:31,590 INFO mch.training: Only training specified node: Diffuse low grade glioma, MAPK pathway altered
+2025-11-16 18:17:41,988 INFO mch.training: Only training specified node: Papillary tumour of the pineal region, WHO Grade unknown
+2025-11-16 18:17:43,176 INFO mch.training: Only training specified node: Glioblastoma, NOS
+2025-11-16 18:17:43,207 INFO mch.training: Only training specified node: Hepatocellular carcinoma
+2025-11-16 18:17:53,635 INFO mch.training: Only training specified node: Mixed germ cell tumour, non-CNS
+2025-11-16 18:17:54,727 INFO mch.training: Only training specified node: Infant-type hemispheric glioma fusion-positive
+2025-11-16 18:17:54,832 INFO mch.training: Only training specified node: Juvenile granulosa cell ovarian tumour
+2025-11-16 18:17:54,886 INFO mch.training: Only training specified node: Astrocytoma, NOS WHO G3
+2025-11-16 18:17:54,887 INFO mch.training: Only training specified node: Primary intracranial sarcoma, DICER1-mutant
+2025-11-16 18:18:02,384 INFO mch.training: Only training specified node: Papillary thyroid carcinoma
+2025-11-16 18:18:02,526 INFO mch.training: Only training specified node: Thyroid C cell hyperplasia
+2025-11-16 18:18:11,670 INFO mch.training: Only training specified node: Meningioma WHO Grade unknown
+2025-11-16 18:18:13,419 INFO mch.training: Only training specified node: Pleomorphic xanthoastrocytoma WHO G3
+2025-11-16 18:18:13,479 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-16 18:18:25,551 INFO mch.training: Only training specified node: Psammomatoid ossifying fibroma
+2025-11-16 18:18:25,863 INFO mch.training: Only training specified node: Mesenchymal hamartoma of liver
+2025-11-16 18:18:25,868 INFO mch.training: Only training specified node: Yolk sac tumour, CNS
+2025-11-16 18:18:25,982 INFO mch.training: Only training specified node: EWSR1-rearranged sarcoma, non-ETS fusion
+2025-11-16 18:18:26,036 INFO mch.training: Only training specified node: Papillary tumour of the pineal region, WHO G3
+2025-11-16 18:18:33,351 INFO mch.training: Only training specified node: Malignant melanoma, primary CNS
+2025-11-16 18:18:33,620 INFO mch.training: Only training specified node: Follicular adenoma
+2025-11-16 18:18:43,226 INFO mch.training: Only training specified node: CIC-rearranged sarcoma, CNS
+2025-11-16 18:18:44,138 INFO mch.training: Only training specified node: Acute megakaryoblastic leukaemia
+2025-11-16 18:18:44,152 INFO mch.training: Only training specified node: NTRK-rearranged sarcoma
+2025-11-16 18:18:57,075 INFO mch.training: Only training specified node: Hodgkin lymphoma
+2025-11-16 18:18:57,406 INFO mch.training: Only training specified node: Pheochromocytoma
+2025-11-16 18:18:57,483 INFO mch.training: Only training specified node: Sertoli-Leydig cell ovarian tumour
+2025-11-16 18:18:57,488 INFO mch.training: Only training specified node: Breast carcinoma
+2025-11-16 18:18:57,534 INFO mch.training: Only training specified node: Adrenocortical adenoma
+2025-11-16 18:19:03,814 INFO mch.training: Only training specified node: Myxoid pleomorphic liposarcoma
+2025-11-16 18:19:04,333 INFO mch.training: Only training specified node: Yolk sac tumour, non-CNS
+2025-11-16 18:19:04,485 INFO mch.training: Only training specified node: Posterior fossa B ependymoma, group PFB, WHO G2
+2025-11-16 18:19:14,871 INFO mch.training: Only training specified node: Astrocytoma, IDH-mutant WHO G2
+2025-11-16 18:19:14,878 INFO mch.training: Only training specified node: Central neurocytoma
+2025-11-16 18:19:25,087 INFO mch.training: Only training specified node: Medulloblastoma, non-WNT/non-SHH
+2025-11-16 18:19:25,129 INFO mch.training: Only training specified node: Pancreatic acinar cell carcinoma
+2025-11-16 18:19:26,408 INFO mch.training: Only training specified node: Medulloblastoma, histologically defined
+2025-11-16 18:19:26,416 INFO mch.training: Only training specified node: Burkitt leukaemia
+2025-11-16 18:19:26,466 INFO mch.training: Only training specified node: Acute undifferentiated leukaemia
+2025-11-16 18:19:34,603 INFO mch.training: Only training specified node: Infantile fibrosarcoma
+2025-11-16 18:19:35,107 INFO mch.training: Only training specified node: Embryonal tumour with multilayered rosettes, NOS
+2025-11-16 18:19:35,160 INFO mch.training: Only training specified node: Paraganglioma
+2025-11-16 18:19:44,898 INFO mch.training: Only training specified node: Astroblastoma, MN1-altered
+2025-11-16 18:19:44,985 INFO mch.training: Only training specified node: Cystic nephroma
+2025-11-16 18:19:55,383 INFO mch.training: Only training specified node: Neurofibroma
+2025-11-16 18:19:57,918 INFO mch.training: Only training specified node: Mixed germ cell-sex cord-stromal tumour, unclassified
+2025-11-16 18:19:57,930 INFO mch.training: Only training specified node: Poorly-differentiated thyroid carcinoma
+2025-11-16 18:19:58,206 INFO mch.training: Only training specified node: Pineoblastoma, MYC/FOXR2-activated
+2025-11-16 18:19:58,256 INFO mch.training: Only training specified node: Glioneuronal tumour, NOS, low grade
+2025-11-16 18:19:58,321 INFO mch.training: Only training specified node: Medulloblastoma, SHH-activated and TP53-mutant
+2025-11-16 18:20:04,863 INFO mch.training: Only training specified node: Diffuse leptomeningeal glioneuronal tumour
+2025-11-16 18:20:04,888 INFO mch.training: Only training specified node: Ewing sarcoma, soft tissue
+2025-11-16 18:20:14,283 INFO mch.training: Only training specified node: Pleomorphic xanthoastrocytoma WHO Grade unknown
+2025-11-16 18:20:15,419 INFO mch.training: Only training specified node: CNS embryonal tumour with BCOR internal tandem duplication
+2025-11-16 18:20:15,605 INFO mch.training: Only training specified node: Schwannoma
+2025-11-16 18:20:28,270 INFO mch.training: Only training specified node: Immature teratoma, non-CNS
+2025-11-16 18:20:28,463 INFO mch.training: Only training specified node: Subependymal giant cell astrocytoma
+2025-11-16 18:20:28,581 INFO mch.training: Only training specified node: Undifferentiated sarcoma
+2025-11-16 18:20:28,638 INFO mch.training: Only training specified node: Astrocytoma, IDH-mutant WHO G4
+2025-11-16 18:20:28,657 INFO mch.training: Only training specified node: Solitary fibrous tumour
+2025-11-16 18:20:34,327 INFO mch.training: Only training specified node: Astroblastoma, not elsewhere classified
+2025-11-16 18:20:35,507 INFO mch.training: Only training specified node: Meningioma WHO G1
+2025-11-16 18:20:46,398 INFO mch.training: Only training specified node: Malignant melanotic nerve sheath tumour
+2025-11-16 18:20:46,729 INFO mch.training: Only training specified node: Diffuse glioneuronal tumour with oligodendroglioma-like features and nuclear clusters
+2025-11-16 18:20:46,789 INFO mch.training: Only training specified node: Diffuse midline glioma, H3 K27-altered, H3 K27M mutation
+2025-11-16 18:20:57,141 INFO mch.training: Only training specified node: Calcifying aponeurotic fibroma
+2025-11-16 18:20:57,513 INFO mch.training: Only training specified node: High-grade B-cell lymphoma with 11q aberration
+2025-11-16 18:20:58,513 INFO mch.training: Only training specified node: Therapy-related acute myeloid leukaemia
+2025-11-16 18:20:58,647 INFO mch.training: Only training specified node: Myelodysplastic syndrome
+2025-11-16 18:20:58,836 INFO mch.training: Only training specified node: Peripheral T-cell lymphoma
+2025-11-16 18:20:58,864 INFO mch.training: Only training specified node: Adenosarcoma with sarcomatous overgrowth
+2025-11-16 18:21:05,242 INFO mch.training: Only training specified node: Aneurysmal bone cyst
+2025-11-16 18:21:17,766 INFO mch.training: Only training specified node: Ganglioglioma
+2025-11-16 18:21:18,015 INFO mch.training: Only training specified node: Malignant melanotic neuroectodermal tumour of infancy
+2025-11-16 18:21:18,078 INFO mch.training: Only training specified node: Gastrointestinal neuroectodermal tumour
+2025-11-16 18:21:28,191 INFO mch.training: Only training specified node: T-lymphoblastic leukaemia
+2025-11-16 18:21:28,305 INFO mch.training: Only training specified node: Diffuse high grade glioma, H3-wildtype and IDH-wildtype
+2025-11-16 18:21:29,251 INFO mch.training: Only training specified node: Glioneuronal tumour, NOS, high grade
+2025-11-16 18:21:29,417 INFO mch.training: Only training specified node: Desmoplastic infantile ganglioglioma and astrocytoma
+2025-11-16 18:21:29,543 INFO mch.training: Only training specified node: CNS neuroblastoma, FOXR2-activated
+2025-11-16 18:21:29,628 INFO mch.training: Only training specified node: Myeloid sarcoma
+2025-11-16 18:21:36,345 INFO mch.training: Only training specified node: NUTM1-rearranged neoplasm
+2025-11-16 18:21:48,248 INFO mch.training: Only training specified node: Follicular thyroid carcinoma
+2025-11-16 18:21:48,285 INFO mch.training: Only training specified node: Choroid plexus carcinoma, TP53-wildtype
+2025-11-16 18:21:48,353 INFO mch.training: Only training specified node: Diffuse hemispheric glioma, H3 G34-mutant
+2025-11-16 18:22:01,969 INFO mch.training: Only training specified node: Embryonal sarcoma of the liver
+2025-11-16 18:22:02,190 INFO mch.training: Only training specified node: Ewing sarcoma, bone
+2025-11-16 18:22:02,208 INFO mch.training: Only training specified node: Primary diffuse large B-cell lymphoma of the CNS
+2025-11-16 18:22:02,327 INFO mch.training: Only training specified node: Angiocentric glioma
+2025-11-16 18:22:02,346 INFO mch.training: Only training specified node: Langerhans cell histiocytosis
+2025-11-16 18:22:02,467 INFO mch.training: Only training specified node: Chordoma
+2025-11-16 18:22:06,171 INFO mch.training: Only training specified node: Pleuropulmonary blastoma
+2025-11-16 18:22:19,618 INFO mch.training: Only training specified node: Myxopapillary ependymoma
+2025-11-16 18:22:20,013 INFO mch.training: Only training specified node: Astrocytoma, IDH-mutant WHO grade unknown
+2025-11-16 18:22:20,093 INFO mch.training: Only training specified node: Glioblastoma, IDH wild-type
+2025-11-16 20:37:45,732 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 20:37:45,733 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 20:43:31,319 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 20:43:31,320 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 21:15:48,310 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 21:15:48,311 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 21:48:07,924 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 21:48:07,926 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 21:48:23,989 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-16 21:48:24,422 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-16 21:48:24,825 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-16 21:48:25,224 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-16 21:48:25,628 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-16 21:48:26,022 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-16 21:48:26,526 INFO mch.training: Prefilter done: kept 200 features
+2025-11-16 21:48:26,540 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-16 21:48:26,547 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-16 21:48:26,548 INFO mch.training: DM disabled
+2025-11-16 21:48:26,549 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-16 21:48:27,677 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/mt-method2/src/mch/models/training.py", line 227, in train_all_models
+    search.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 483, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 182, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 474, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 425, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 471, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 1019, in fit
+    self._run_search(evaluate_candidates)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 1573, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 132, in __init__
+    raise TypeError(
+TypeError: Parameter grid for parameter 'svm' needs to be a list or a numpy array, but got {'modelGeneration__C': [0.1, 1, 10], 'modelGeneration__kernel': ['linear', 'rbf'], 'modelGeneration__gamma': ['scale', 'auto']} (of type dict) instead. Single values need to be wrapped in a list with one element.
+2025-11-16 22:27:13,035 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 22:27:13,037 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 22:27:29,264 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-16 22:27:29,750 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-16 22:27:30,181 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-16 22:27:30,606 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-16 22:27:31,029 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-16 22:27:31,457 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-16 22:27:31,979 INFO mch.training: Prefilter done: kept 200 features
+2025-11-16 22:27:31,995 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-16 22:27:32,003 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-16 22:27:32,004 INFO mch.training: DM disabled
+2025-11-16 22:27:32,005 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-16 22:27:33,111 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/mt-method2/src/mch/models/training.py", line 231, in train_all_models
+    search.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 483, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 182, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 474, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 425, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 471, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 1019, in fit
+    self._run_search(evaluate_candidates)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 1573, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 132, in __init__
+    raise TypeError(
+TypeError: Parameter grid for parameter 'svm' needs to be a list or a numpy array, but got {'modelGeneration__C': [0.1, 1, 10], 'modelGeneration__kernel': ['linear', 'rbf'], 'modelGeneration__gamma': ['scale', 'auto']} (of type dict) instead. Single values need to be wrapped in a list with one element.
+2025-11-16 22:35:59,936 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 22:35:59,938 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 22:36:16,343 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-16 22:36:16,826 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-16 22:36:17,239 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-16 22:36:17,668 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-16 22:36:18,093 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-16 22:36:18,534 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-16 22:36:19,052 INFO mch.training: Prefilter done: kept 200 features
+2025-11-16 22:36:19,069 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-16 22:36:19,076 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-16 22:36:19,077 INFO mch.training: DM disabled
+2025-11-16 22:36:19,078 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-16 22:36:20,133 ERROR mch.training: Error training model for Haematological malignancy
+Traceback (most recent call last):
+  File "/Workspace/9900-f18a-cake/mt-method2/src/mch/models/training.py", line 231, in train_all_models
+    search.fit(X_train, y_train)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 483, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 182, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1655, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/sklearn/__init__.py", line 1430, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 474, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 425, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/mlflow/utils/autologging_utils/safety.py", line 471, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python_shell/lib/dbruntime/MLWorkloadsInstrumentation/_sklearn.py", line 29, in patch_function
+    original_result = original(self, *args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 1019, in fit
+    self._run_search(evaluate_candidates)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 1573, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_search.py", line 965, in evaluate_candidates
+    out = parallel(
+          ^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 74, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 136, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 876, in _fit_and_score
+    estimator = estimator.set_params(**clone(parameters, safe=False))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/pipeline.py", line 237, in set_params
+    self._set_params("steps", **kwargs)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/utils/metaestimators.py", line 69, in _set_params
+    super().set_params(**params)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 291, in set_params
+    valid_params[key].set_params(**sub_params)
+  File "/local_disk0/.ephemeral_nfs/cluster_libraries/python/lib/python3.12/site-packages/sklearn/base.py", line 279, in set_params
+    raise ValueError(
+ValueError: Invalid parameter 'C' for estimator RandomForestClassifier(max_depth=10, n_estimators=50, n_jobs=1, random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+2025-11-16 22:46:11,094 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-16 22:46:11,096 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-16 22:46:27,402 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=5000, chunk_size=1000
+2025-11-16 22:46:27,883 INFO mch.training: Prefilter progress: scanned 1000/5000 columns
+2025-11-16 22:46:28,312 INFO mch.training: Prefilter progress: scanned 2000/5000 columns
+2025-11-16 22:46:28,729 INFO mch.training: Prefilter progress: scanned 3000/5000 columns
+2025-11-16 22:46:29,146 INFO mch.training: Prefilter progress: scanned 4000/5000 columns
+2025-11-16 22:46:29,572 INFO mch.training: Prefilter progress: scanned 5000/5000 columns
+2025-11-16 22:46:30,076 INFO mch.training: Prefilter done: kept 200 features
+2025-11-16 22:46:30,092 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-16 22:46:30,097 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-16 22:46:30,099 INFO mch.training: DM disabled
+2025-11-16 22:46:30,101 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-16 22:55:10,533 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-16 22:55:10,543 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 04:35:01,722 INFO mch.training: Only training specified node: Colorectal carcinoma
+2025-11-18 04:35:01,852 INFO mch.training: Only training specified node: CIC-rearranged sarcoma, non-CNS
+2025-11-18 04:35:01,883 INFO mch.training: Only training specified node: Medullary thyroid carcinoma
+2025-11-18 04:35:01,964 INFO mch.training: Only training specified node: Olfactory neuroblastoma
+2025-11-18 04:35:02,044 INFO mch.training: Only training specified node: Malignant peripheral nerve sheath tumour
+2025-11-18 04:41:54,345 INFO mch.training: Only training specified node: CIC-rearranged sarcoma, non-CNS
+2025-11-18 04:41:55,092 INFO mch.training: Only training specified node: Malignant peripheral nerve sheath tumour
+2025-11-18 04:41:55,164 INFO mch.training: Only training specified node: Medullary thyroid carcinoma
+2025-11-18 04:41:55,171 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 04:41:55,172 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 04:41:55,356 INFO mch.training: Only training specified node: Olfactory neuroblastoma
+2025-11-18 04:41:55,359 INFO mch.training: Only training specified node: Colorectal carcinoma
+2025-11-18 04:42:08,442 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 04:42:08,868 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 04:42:09,248 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 04:42:09,629 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 04:42:10,008 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 04:42:10,421 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 04:42:10,445 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 04:42:10,449 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 04:42:10,450 INFO mch.training: DM disabled
+2025-11-18 04:42:10,451 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 04:46:10,240 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 04:46:10,246 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 05:07:14,536 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-18 05:07:15,100 INFO mch.training: Only training specified node: Solid tumour
+2025-11-18 05:07:15,101 INFO mch.training: Training model for node: Solid tumour
+2025-11-18 05:07:15,210 INFO mch.training: Only training specified node: Paediatric-type diffuse glioma
+2025-11-18 05:07:15,263 INFO mch.training: Only training specified node: Leukaemia
+2025-11-18 05:07:15,310 INFO mch.training: Only training specified node: Sarcoma
+2025-11-18 05:07:15,312 INFO mch.training: Training model for node: Sarcoma
+2025-11-18 05:07:15,332 INFO mch.training: Only training specified node: ZERO2
+2025-11-18 05:07:27,369 INFO mch.training: Only training specified node: CNS embryonal tumour
+2025-11-18 05:07:27,386 INFO mch.training: Only training specified node: Neuroblastoma
+2025-11-18 05:07:27,388 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-18 05:07:27,470 INFO mch.training: Only training specified node: Central nervous system
+2025-11-18 05:07:27,472 INFO mch.training: Training model for node: Central nervous system
+2025-11-18 05:07:27,832 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 05:07:27,834 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 05:07:34,592 INFO mch.training: Prefilter start: input shape=(48,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 05:07:35,001 INFO mch.training: Prefilter start: input shape=(80,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 05:07:35,085 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 05:07:35,534 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 05:07:35,621 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 05:07:35,989 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 05:07:36,127 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 05:07:36,433 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 05:07:36,580 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 05:07:36,910 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 05:07:37,087 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 05:07:37,116 INFO mch.training: Train/Test shapes: X_train=(38, 200), X_test=(10, 200)
+2025-11-18 05:07:37,118 INFO mch.training: DM disabled
+2025-11-18 05:07:37,119 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 05:07:37,461 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 05:07:37,481 WARNING mch.training: Drop rare classes (<2 samples): Liver tumour, Sarcoma
+2025-11-18 05:07:37,487 INFO mch.training: Train/Test shapes: X_train=(63, 200), X_test=(16, 200)
+2025-11-18 05:07:37,488 INFO mch.training: DM disabled
+2025-11-18 05:07:37,489 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 05:07:48,460 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 05:07:49,044 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 05:07:49,463 INFO mch.training: Prefilter start: input shape=(129,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 05:07:49,556 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 05:07:50,150 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 05:07:50,191 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 05:07:50,642 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 05:07:50,706 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 05:07:51,177 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 05:07:51,190 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 05:07:51,195 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 05:07:51,200 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 05:07:51,201 INFO mch.training: DM disabled
+2025-11-18 05:07:51,201 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 05:07:51,657 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 05:07:52,144 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 05:07:52,159 WARNING mch.training: Drop rare classes (<2 samples): Germ cell tumour, CNS, Peripheral nerve sheath tumour, CNS
+2025-11-18 05:07:52,165 INFO mch.training: Train/Test shapes: X_train=(101, 200), X_test=(26, 200)
+2025-11-18 05:07:52,166 INFO mch.training: DM disabled
+2025-11-18 05:07:52,167 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 05:10:59,856 INFO mch.training: Only training specified node: Pilocytic astrocytoma
+2025-11-18 05:11:01,638 INFO mch.training: Only training specified node: Ewing sarcoma
+2025-11-18 05:11:01,761 INFO mch.training: Only training specified node: Rhabdomyosarcoma
+2025-11-18 05:11:04,355 INFO mch.training: Only training specified node: Circumscribed astrocytic glioma
+2025-11-18 05:11:05,174 INFO mch.training: Only training specified node: Acute myeloid leukaemia
+2025-11-18 05:11:06,244 INFO mch.training: Only training specified node: Ependymoma
+2025-11-18 05:11:30,161 INFO mch.training: [GS] Test accuracy: 0.1000, macro_f1: 0.0370, weighted_f1: 0.0444
+2025-11-18 05:11:30,171 INFO mch.training: Model trained for Solid tumour; saved via MLflow if estimator present.
+2025-11-18 05:12:17,576 INFO mch.training: [GS] Test accuracy: 0.1875, macro_f1: 0.1475, weighted_f1: 0.1749
+2025-11-18 05:12:17,582 INFO mch.training: Model trained for Sarcoma; saved via MLflow if estimator present.
+2025-11-18 05:12:20,821 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 05:12:20,828 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 05:15:08,772 INFO mch.training: [GS] Test accuracy: 0.1538, macro_f1: 0.0500, weighted_f1: 0.1192
+2025-11-18 05:15:08,785 INFO mch.training: Model trained for Central nervous system; saved via MLflow if estimator present.
+2025-11-18 05:15:29,240 INFO mch.training: Only training specified node: Diffuse midline glioma, H3 K27-altered
+2025-11-18 05:15:29,372 INFO mch.training: Only training specified node: Osteosarcoma
+2025-11-18 05:15:30,255 INFO mch.training: Only training specified node: Kidney tumour, Solid
+2025-11-18 05:15:30,646 INFO mch.training: Only training specified node: Wilms tumour
+2025-11-18 05:15:30,684 INFO mch.training: Only training specified node: Diffuse midline glioma, H3 K27-altered, H3 K27M mutation
+2025-11-18 05:15:34,807 INFO mch.training: Only training specified node: FOXO1 fusion positive rhabdomyosarcoma
+2025-11-18 05:15:34,822 INFO mch.training: Only training specified node: Medulloblastoma
+2025-11-18 05:15:40,862 INFO mch.training: Only training specified node: Bone tumour, Sarcoma
+2025-11-18 05:15:41,937 INFO mch.training: Only training specified node: Sarcoma other
+2025-11-18 05:19:31,181 INFO mch.training: Only training specified node: Diffuse high grade glioma, H3-wildtype and IDH-wildtype
+2025-11-18 05:19:31,271 INFO mch.training: Only training specified node: FOXO1 fusion negative rhabdomyosarcoma
+2025-11-18 05:19:31,289 INFO mch.training: Only training specified node: Posterior fossa A ependymoma, group PFA
+2025-11-18 05:19:31,303 INFO mch.training: Only training specified node: T-lymphoblastic leukaemia
+2025-11-18 05:19:31,384 INFO mch.training: Only training specified node: Lymphoma
+2025-11-18 05:19:31,565 INFO mch.training: Only training specified node: Solid other
+2025-11-18 05:19:31,569 INFO mch.training: Only training specified node: Alveolar rhabdomyosarcoma
+2025-11-18 12:32:29,493 INFO mch.training: Only training specified node: Colorectal carcinoma
+2025-11-18 12:42:45,656 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 12:42:45,657 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 12:42:57,652 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 12:42:58,062 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 12:42:58,425 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 12:42:58,787 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 12:42:59,157 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 12:42:59,538 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 12:42:59,551 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 12:42:59,555 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 12:42:59,556 INFO mch.training: DM disabled
+2025-11-18 12:42:59,557 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 12:46:59,772 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 12:46:59,779 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 12:57:41,411 INFO mch.training: Only training specified node: Solid tumour
+2025-11-18 12:57:41,412 INFO mch.training: Training model for node: Solid tumour
+2025-11-18 12:57:41,586 INFO mch.training: Only training specified node: Central nervous system
+2025-11-18 12:57:41,587 INFO mch.training: Training model for node: Central nervous system
+2025-11-18 12:57:41,977 INFO mch.training: Only training specified node: Leukaemia
+2025-11-18 12:57:41,996 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-18 12:57:42,030 INFO mch.training: Only training specified node: Neuroblastoma
+2025-11-18 12:57:42,032 INFO mch.training: Training model for node: Neuroblastoma
+2025-11-18 12:57:42,067 INFO mch.training: Only training specified node: Sarcoma
+2025-11-18 12:57:42,070 INFO mch.training: Training model for node: Sarcoma
+2025-11-18 12:57:58,145 INFO mch.training: Only training specified node: Paediatric-type diffuse glioma
+2025-11-18 12:57:58,362 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 12:57:58,363 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 12:57:58,443 INFO mch.training: Only training specified node: CNS embryonal tumour
+2025-11-18 12:57:58,505 INFO mch.training: Only training specified node: Rhabdomyosarcoma
+2025-11-18 12:58:00,219 INFO mch.training: Prefilter start: input shape=(48,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 12:58:00,735 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 12:58:00,850 INFO mch.training: Prefilter start: input shape=(129,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 12:58:01,027 INFO mch.training: Prefilter start: input shape=(80,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 12:58:01,115 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 12:58:01,286 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 12:58:01,480 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 12:58:01,508 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 12:58:01,682 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 12:58:01,873 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 12:58:01,898 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 12:58:02,074 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 12:58:02,264 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 12:58:02,317 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 12:58:02,335 INFO mch.training: Train/Test shapes: X_train=(38, 200), X_test=(10, 200)
+2025-11-18 12:58:02,336 INFO mch.training: DM disabled
+2025-11-18 12:58:02,337 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 12:58:02,461 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 12:58:02,645 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 12:58:02,854 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 12:58:02,869 WARNING mch.training: Drop rare classes (<2 samples): Germ cell tumour, CNS, Peripheral nerve sheath tumour, CNS
+2025-11-18 12:58:02,874 INFO mch.training: Train/Test shapes: X_train=(101, 200), X_test=(26, 200)
+2025-11-18 12:58:02,875 INFO mch.training: DM disabled
+2025-11-18 12:58:02,876 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 12:58:03,041 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 12:58:03,053 WARNING mch.training: Drop rare classes (<2 samples): Liver tumour, Sarcoma
+2025-11-18 12:58:03,058 INFO mch.training: Train/Test shapes: X_train=(63, 200), X_test=(16, 200)
+2025-11-18 12:58:03,059 INFO mch.training: DM disabled
+2025-11-18 12:58:03,059 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 12:58:11,803 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 12:58:12,238 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 12:58:12,591 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 12:58:12,950 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 12:58:13,311 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 12:58:13,688 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 12:58:13,701 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 12:58:13,705 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 12:58:13,706 INFO mch.training: DM disabled
+2025-11-18 12:58:13,707 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 13:01:24,897 INFO mch.training: [GS] Test accuracy: 0.1000, macro_f1: 0.0370, weighted_f1: 0.0444
+2025-11-18 13:01:24,903 INFO mch.training: Model trained for Solid tumour; saved via MLflow if estimator present.
+2025-11-18 13:02:10,822 INFO mch.training: [GS] Test accuracy: 0.1875, macro_f1: 0.1475, weighted_f1: 0.1749
+2025-11-18 13:02:10,828 INFO mch.training: Model trained for Sarcoma; saved via MLflow if estimator present.
+2025-11-18 13:02:15,694 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 13:02:15,700 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 13:04:45,136 INFO mch.training: [GS] Test accuracy: 0.1538, macro_f1: 0.0500, weighted_f1: 0.1192
+2025-11-18 13:04:45,147 INFO mch.training: Model trained for Central nervous system; saved via MLflow if estimator present.
+2025-11-18 13:09:13,651 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 13:09:13,652 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 13:09:26,067 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 13:09:26,516 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 13:09:26,882 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 13:09:27,252 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 13:09:27,620 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 13:09:27,996 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 13:09:28,009 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 13:09:28,013 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 13:09:28,014 INFO mch.training: DM disabled
+2025-11-18 13:09:28,015 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 13:13:00,118 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 13:13:00,119 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 13:13:00,129 INFO mch.training: Only training specified node: Acute myeloid leukaemia
+2025-11-18 13:13:00,513 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-18 13:13:12,817 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 13:13:13,239 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 13:13:13,601 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 13:13:13,976 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 13:13:14,332 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 13:13:14,712 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 13:13:14,725 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 13:13:14,729 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 13:13:14,730 INFO mch.training: DM disabled
+2025-11-18 13:13:14,731 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 13:13:32,315 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 13:13:32,321 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 13:17:17,740 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 13:17:17,747 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 13:38:43,681 INFO mch.training: Only training specified node: Acute myeloid leukaemia
+2025-11-18 13:38:43,768 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 13:38:43,769 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 13:38:44,003 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-18 13:38:56,538 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 13:38:56,961 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 13:38:57,326 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 13:38:57,692 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 13:38:58,062 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 13:38:58,460 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 13:38:58,484 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 13:38:58,489 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 13:38:58,490 INFO mch.training: DM disabled
+2025-11-18 13:38:58,491 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 13:43:00,904 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 13:43:00,911 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 13:55:11,501 INFO mch.training: Only training specified node: Central nervous system
+2025-11-18 13:55:11,502 INFO mch.training: Training model for node: Central nervous system
+2025-11-18 13:55:23,714 INFO mch.training: Prefilter start: input shape=(129,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 13:55:24,138 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 13:55:24,503 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 13:55:24,867 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 13:55:25,237 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 13:55:25,628 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 13:55:25,642 WARNING mch.training: Drop rare classes (<2 samples): Germ cell tumour, CNS, Peripheral nerve sheath tumour, CNS
+2025-11-18 13:55:25,647 INFO mch.training: Train/Test shapes: X_train=(101, 200), X_test=(26, 200)
+2025-11-18 13:55:25,648 INFO mch.training: DM disabled
+2025-11-18 13:55:25,649 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 14:02:07,944 INFO mch.training: [GS] Test accuracy: 0.1538, macro_f1: 0.0500, weighted_f1: 0.1192
+2025-11-18 14:02:07,956 INFO mch.training: Model trained for Central nervous system; saved via MLflow if estimator present.
+2025-11-18 14:10:53,039 INFO mch.training: Only training specified node: Leukaemia
+2025-11-18 14:10:53,071 INFO mch.training: Only training specified node: Sarcoma
+2025-11-18 14:10:53,072 INFO mch.training: Training model for node: Sarcoma
+2025-11-18 14:10:53,175 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-18 14:10:53,221 INFO mch.training: Only training specified node: Central nervous system
+2025-11-18 14:10:53,222 INFO mch.training: Training model for node: Central nervous system
+2025-11-18 14:10:53,265 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-18 14:10:53,266 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-18 14:10:53,390 INFO mch.training: Only training specified node: Solid tumour
+2025-11-18 14:10:53,391 INFO mch.training: Training model for node: Solid tumour
+2025-11-18 14:11:10,460 INFO mch.training: Prefilter start: input shape=(80,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 14:11:10,725 INFO mch.training: Prefilter start: input shape=(48,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 14:11:10,755 INFO mch.training: Prefilter start: input shape=(108,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 14:11:10,926 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 14:11:10,930 INFO mch.training: Prefilter start: input shape=(129,600118), candidates=600117, topk=200, scan_max=20000, chunk_size=5000
+2025-11-18 14:11:11,164 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 14:11:11,205 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 14:11:11,335 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 14:11:11,397 INFO mch.training: Prefilter progress: scanned 5000/20000 columns
+2025-11-18 14:11:11,587 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 14:11:11,588 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 14:11:11,742 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 14:11:11,810 INFO mch.training: Prefilter progress: scanned 10000/20000 columns
+2025-11-18 14:11:11,965 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 14:11:11,981 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 14:11:12,137 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 14:11:12,195 INFO mch.training: Prefilter progress: scanned 15000/20000 columns
+2025-11-18 14:11:12,348 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 14:11:12,368 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 14:11:12,553 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 14:11:12,568 WARNING mch.training: Drop rare classes (<2 samples): Liver tumour, Sarcoma
+2025-11-18 14:11:12,571 INFO mch.training: Prefilter progress: scanned 20000/20000 columns
+2025-11-18 14:11:12,573 INFO mch.training: Train/Test shapes: X_train=(63, 200), X_test=(16, 200)
+2025-11-18 14:11:12,574 INFO mch.training: DM disabled
+2025-11-18 14:11:12,575 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 14:11:12,759 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 14:11:12,775 INFO mch.training: Train/Test shapes: X_train=(38, 200), X_test=(10, 200)
+2025-11-18 14:11:12,776 INFO mch.training: DM disabled
+2025-11-18 14:11:12,777 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 14:11:12,778 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 14:11:12,792 WARNING mch.training: Drop rare classes (<2 samples): Histiocytosis
+2025-11-18 14:11:12,798 INFO mch.training: Train/Test shapes: X_train=(85, 200), X_test=(22, 200)
+2025-11-18 14:11:12,799 INFO mch.training: DM disabled
+2025-11-18 14:11:12,800 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 14:11:12,967 INFO mch.training: Prefilter done: kept 200 features
+2025-11-18 14:11:12,981 WARNING mch.training: Drop rare classes (<2 samples): Germ cell tumour, CNS, Peripheral nerve sheath tumour, CNS
+2025-11-18 14:11:12,986 INFO mch.training: Train/Test shapes: X_train=(101, 200), X_test=(26, 200)
+2025-11-18 14:11:12,987 INFO mch.training: DM disabled
+2025-11-18 14:11:12,988 INFO mch.training: Pipeline steps: ['modelGeneration']
+2025-11-18 14:14:38,300 INFO mch.training: [GS] Test accuracy: 0.1000, macro_f1: 0.0370, weighted_f1: 0.0444
+2025-11-18 14:14:38,307 INFO mch.training: Model trained for Solid tumour; saved via MLflow if estimator present.
+2025-11-18 14:15:20,354 INFO mch.training: [GS] Test accuracy: 0.8636, macro_f1: 0.3089, weighted_f1: 0.8004
+2025-11-18 14:15:20,360 INFO mch.training: Model trained for Haematological malignancy; saved via MLflow if estimator present.
+2025-11-18 14:15:23,554 INFO mch.training: [GS] Test accuracy: 0.1875, macro_f1: 0.1475, weighted_f1: 0.1749
+2025-11-18 14:15:23,561 INFO mch.training: Model trained for Sarcoma; saved via MLflow if estimator present.
+2025-11-18 14:18:00,112 INFO mch.training: [GS] Test accuracy: 0.1538, macro_f1: 0.0500, weighted_f1: 0.1192
+2025-11-18 14:18:00,123 INFO mch.training: Model trained for Central nervous system; saved via MLflow if estimator present.
+2025-11-19 11:59:25,084 INFO mch.training: Only training specified node: Leukaemia
+2025-11-19 11:59:25,125 INFO mch.training: Only training specified node: Solid tumour
+2025-11-19 11:59:25,126 INFO mch.training: Training model for node: Solid tumour
+2025-11-19 11:59:25,136 INFO mch.training: Only training specified node: Central nervous system
+2025-11-19 11:59:25,137 INFO mch.training: Only training specified node: Sarcoma
+2025-11-19 11:59:25,138 INFO mch.training: Training model for node: Central nervous system
+2025-11-19 11:59:25,138 INFO mch.training: Training model for node: Sarcoma
+2025-11-19 11:59:25,151 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-19 11:59:25,167 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-19 11:59:25,168 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-19 12:05:01,188 INFO mch.training: Only training specified node: Central nervous system
+2025-11-19 12:05:01,189 INFO mch.training: Training model for node: Central nervous system
+2025-11-19 12:05:01,320 INFO mch.training: Only training specified node: Sarcoma
+2025-11-19 12:05:01,326 INFO mch.training: Training model for node: Sarcoma
+2025-11-19 12:05:02,625 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-19 12:05:02,628 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-19 12:05:02,637 INFO mch.training: Only training specified node: Leukaemia
+2025-11-19 12:05:03,851 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-19 12:05:03,935 INFO mch.training: Only training specified node: Solid tumour
+2025-11-19 12:05:03,937 INFO mch.training: Training model for node: Solid tumour
+2025-11-19 12:13:07,226 INFO mch.training: Only training specified node: Central nervous system
+2025-11-19 12:13:07,228 INFO mch.training: Training model for node: Central nervous system
+2025-11-19 12:13:09,215 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-19 12:13:09,217 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-19 12:13:15,196 INFO mch.training: Only training specified node: Leukaemia
+2025-11-19 12:13:15,956 INFO mch.training: Only training specified node: Sarcoma
+2025-11-19 12:13:15,958 INFO mch.training: Training model for node: Sarcoma
+2025-11-19 12:13:17,404 INFO mch.training: Only training specified node: B-lymphoblastic leukaemia
+2025-11-19 12:13:18,872 INFO mch.training: Only training specified node: Solid tumour
+2025-11-19 12:13:18,874 INFO mch.training: Training model for node: Solid tumour
+2025-11-19 12:30:19,003 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-19 12:30:19,005 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-19 12:40:47,271 INFO mch.training: Only training specified node: Haematological malignancy
+2025-11-19 12:40:47,272 INFO mch.training: Training model for node: Haematological malignancy
+2025-11-19 12:49:31,979 INFO mch.training: Only training specified node: Leukaemia
+2025-11-19 13:07:23,893 INFO mch.training: Only training specified node: Leukaemia

@@ -78,7 +78,7 @@ def filter_cross_hybrid(df: pl.DataFrame) -> pl.DataFrame:
 
 def main():
     """Main function to process the data."""
-    print("\n📊 Starting Methylation Data Filtering Process 📊\n")
+    print("\n Starting Methylation Data Filtering Process \n")
     config_file = "filtering_config.yaml"
     config = load_config(config_file)
     
@@ -138,9 +138,9 @@ def main():
     # Save beta values
     print("\nSaving filtered m values...")
     df.write_parquet(m_values_filtered_data_file)
-    print(f"✅ M values saved to {m_values_filtered_data_file}")
+    print(f" M values saved to {m_values_filtered_data_file}")
     
-    print("\n🎉 Filtering process completed successfully! 🎉")
+    print("\n Filtering process completed successfully! ")
 
 
 if __name__ == "__main__":
